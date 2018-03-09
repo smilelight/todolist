@@ -1,0 +1,10 @@
+<!--components/tips-info/tips-info.wxml-->
+<view class="tips-info">
+  <image
+    src="/assets/img/icon-todo.png"
+    class="tips-info__icon">
+  </image>
+  <text class="tips-info__text">
+    {{ text }}
+  </text>
+</view>

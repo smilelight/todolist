@@ -1,0 +1,35 @@
+/**todo.wxss**/
+.todo-header {
+  background: #F5F8FF;
+  display: block;
+  font-size: 28rpx;
+  padding: 12rpx 30rpx;
+  color: #9198AB;
+}
+
+.todo-list {
+  background: #fff;
+}
+
+.todo-list__item {
+
+}
+
+/* todo-add */
+.todo-add {
+  position: fixed;
+  /*left: 50%;*/
+  right: 50rpx;
+  bottom: 60rpx;
+  bottom: 5%;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: -45rpx;
+  border-radius: 50%;
+  font-size: 60rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: #09bb07;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+}

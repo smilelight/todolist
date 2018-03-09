@@ -1,0 +1,19 @@
+/**app.wxss**/
+@import "./assets/wxss/ripple.wxss";
+@import "./assets/wxss/utils.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+} 
+
+@import "./assets/wxss/me.wxss";
+@import "./assets/wxss/sidebar.wxss";
+@import "./assets/wxss/sidebar.wxss";
+
+

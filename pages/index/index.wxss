@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.loading {
+  width: 220rpx;
+  height: 360rpx;
+  color: #000;
+  text-align: center;
+}
+
+.loading__logo {
+  width: 220rpx;
+  height: 220rpx;
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.loading__name {
+  font-size: 42rpx;
+  font-weight: 200;
+}

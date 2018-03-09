@@ -1,0 +1,16 @@
+/* components/checkbox/checkbox.wxss */
+.todo-checkbox {
+  display: inline-block;
+  padding: 6rpx 10rpx;
+  vertical-align: middle;
+}
+
+.todo-checkbox__icon {
+  color: white !important;
+  border: 4rpx solid #3cc51f;
+  padding: 3rpx;
+}
+
+.todo-checkbox--checked .todo-checkbox__icon{
+  border-color: #C1C5C8 !important;
+}

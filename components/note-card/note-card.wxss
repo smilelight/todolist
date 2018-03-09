@@ -1,0 +1,22 @@
+/* components/note-card/note-card.wxss */
+.note-card {
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin: 30rpx;
+  padding: 30rpx;
+  box-shadow: 3rpx 3rpx 15rpx 0 rgba(0, 0, 0, 0.1);
+  color: #9198AB;
+  font-size: 32rpx;
+}
+
+.note-card__title {
+  display: block;
+  border-bottom: 1rpx dashed #ccc;
+  padding: 0 20rpx 20rpx 0;
+}
+
+.note-card__content {
+  display: block;
+  padding: 20rpx 0 0 0;
+  font-size: 28rpx;
+}

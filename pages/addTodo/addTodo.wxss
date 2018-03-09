@@ -1,0 +1,10 @@
+/* pages/addTodo/addTodo.wxss */
+@import "../../assets/wxss/todolist";
+.create-header {
+  padding: 0;
+  border-bottom: 0;
+}
+button {
+  padding: 10rpx;
+  margin: 20rpx;
+}

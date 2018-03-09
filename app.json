@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/me/me",
+    "pages/todo/todo",
+    "pages/logs/logs",
+    "pages/history/history",
+    "pages/settings/settings",
+    "pages/share/share",
+    "pages/statistics/statistics",
+    "pages/synchronization/synchronization",
+    "pages/calendar/calendar",
+    "pages/addTodo/addTodo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3cc51f",
+    "navigationBarTitleText": "微计划日程管理",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "任务",
+        "iconPath": "assets/images/activity_black.png",
+        "selectedIconPath": "assets/images/activity_green.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "当前",
+        "iconPath": "assets/images/createtask_black.png",
+        "selectedIconPath": "assets/images/createtask_green.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "assets/images/people_black.png",
+        "selectedIconPath": "assets/images/people_green.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

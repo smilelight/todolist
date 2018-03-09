@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+<!--index.wxml-->
+<view class='index'>
+  <view class="container">
+    <view class="userinfo">
+      <block wx:if="{{hasUserInfo}}">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+    <view class='index-bd'>
+      <view class='kind-list'>
+        <view class='kind-list-item kind-list-item-bd kind-list-item-bd-show navigator-box navigator-box-show'>
+          <block wx:for="{{list}}">
+            <navigator url="../{{item.url}}" class="navigator">
+              <view class="navigator-text">{{item.zh}}</view>
+              <view class="navigator-arrow"></view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>

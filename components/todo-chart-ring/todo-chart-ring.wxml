@@ -1,0 +1,4 @@
+<!--components/todo-chart-ring/todo-chart-ring.wxml-->
+<view>
+  <canvas class="canvas" canvas-id="ringCanvas"></canvas>
+</view>

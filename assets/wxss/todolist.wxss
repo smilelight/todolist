@@ -1,0 +1,81 @@
+.page {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(241, 240, 246);
+  padding-bottom: 100rpx;
+  overflow: hidden;
+}
+
+button::after {
+    border: 0; 
+}
+
+.field-set {
+  background-color: #fff;
+}
+
+.field-item {
+  display: flex;
+  border-bottom: 1px dashed #eee;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.field-item:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  display: block;
+  color: #999;
+  white-space: nowrap;
+  min-width: 100rpx;
+  text-align: right;
+}
+
+.field-control {
+  flex: 8;
+  padding: 0 0 0 32rpx;
+  font-size: 32rpx;
+}
+
+.field-input {
+  font-size: 32rpx;
+  padding: 6rpx 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  border-image: none;
+  box-shadow: none;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.button-primary {
+  background-color: #3cc51f;
+  border: 1px solid #3cc51f;
+  color: #fff;
+}
+
+.button-round {
+  border-radius: 300rpx;
+}

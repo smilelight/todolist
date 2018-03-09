@@ -1,0 +1,21 @@
+/* components/tips-info/tips-info.wxss */
+
+
+.tips-info {
+  text-align: center;
+  color: #C1C5C8;
+  padding: 30rpx 0 50rpx 0;
+}
+
+.tips-info__text {
+  font-size: 28rpx;
+  display: inline-block;
+  padding-left: 15rpx;
+}
+
+.tips-info__icon {
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+  opacity: 0.3;
+}

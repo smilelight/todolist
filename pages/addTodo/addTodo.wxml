@@ -1,0 +1,40 @@
+<!--pages/addTodo/addTodo.wxml-->
+<view class="page">
+  <view class="field-set">
+    <view class="create-header">
+      <todo-item
+        todo="{{ todo }}"
+        bindchange="handleTodoItemChange"
+        auto-focus>
+      </todo-item>
+    </view>
+    <view class="field-item">
+      <label class="field-label">优先级</label>
+      <label class="field-control">
+        <picker
+          class="w-full"
+          range="{{ levels }}"
+          value="{{ todo.level - 1 }}"
+          bindchange="handleLevelChange">
+          {{ levels[todo.level - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">描述</label>
+      <label class="field-control">
+        <textarea
+          class="field-input w-full"
+          placeholder="任务描述..."
+          bindinput="handleDescChange">
+        </textarea>
+      </label>
+    </view>
+  </view>
+  <view class="fixed-bottom">
+    <view class="button-group">
+      <button class="button" bindtap="handleCancelTap">取消</button>
+      <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+    </view>
+  </view>
+</view>

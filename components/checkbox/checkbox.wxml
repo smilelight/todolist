@@ -1,0 +1,11 @@
+<!--components/checkbox/checkbox.wxml-->
+<view
+  class="todo-checkbox {{ checked ? 'todo-checkbox--checked' : '' }}"
+  bindtap="handleToggle">
+  <icon
+    class="todo-checkbox__icon"
+    type="success_no_circle"
+    color="{{ checked ? '#C1C5C8' : 'white' }}"
+    size="12">
+  </icon>
+</view>

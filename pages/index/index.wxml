@@ -1,0 +1,6 @@
+<view class="page">
+  <view class="loading">
+    <image class="loading__logo" src="../../assets/img/icon-todo.png"></image>
+    <text class="loading__name">Todo List</text>
+  </view>
+</view>

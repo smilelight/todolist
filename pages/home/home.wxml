@@ -1,0 +1,69 @@
+<!--pages/home/home.wxml-->
+<!--
+<view class='task-item'>
+  <text class='myimg'>草</text>
+  <view class='info'>
+    <view class='title'>fuck you</view>
+    <view class='content'>fuck you</view>
+  </view>
+  <view class='info'>
+    <view class='title'>fuck you</view>
+    <view class='content'>fuck you</view>
+  </view>
+</view>
+<view>
+  <button bindtap='navigateToCalendar'>Calendar</button>
+</view>
+-->
+<view class="page">
+  <view class="todo-list">
+    <view class="todo-header">
+      进行中
+    </view>
+    <view
+      wx:for="{{ todos }}"
+      wx:key="{{ index }}"
+      wx:if="{{ !item.completed }}"
+      class="todo-list__item ripple fast fadeInRight"
+      style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item
+        class="todo-item"
+        todo="{{ item }}"
+        data-index="{{ index }}"
+        disAbled=false
+        bindchange="handleTodoItemChange"
+        bindlongpress="handleTodoLongTap"
+        bindtap="handleTap">
+      </todo-item>
+    </view>
+    <view class="ripple bounceIn" wx:if="{{!uncompletedCount}}">
+      <tips-info text="太棒了，你的任务已全部完成啦！">
+      </tips-info>
+    </view>
+  </view>
+  <view wx:if="{{ completedCount }}" class="todo-list">
+    <view class="todo-header">
+      已完成
+    </view>
+    <view
+      wx:for="{{ todos }}"
+      wx:key="{{ index }}"
+      wx:if="{{ item.completed }}"
+      class="todo-list__item ripple fast fadeInRight"
+      style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item
+        class="todo-item"
+        todo="{{ item }}"
+        data-index="{{ index }}"
+        disAbled=false
+        bindchange="handleTodoItemChange"
+        bindlongpress="handleTodoLongTap"
+        >
+      </todo-item>
+    </view>
+  </view>
+  <view class="todo-add" bindtap="handleAddTodo">+</view>
+</view>
+
+
+

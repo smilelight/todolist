@@ -1,0 +1,9 @@
+<!--components/note-card/note-card.wxml-->
+<view class="note-card">
+  <view wx:if="{{ !!note.title }}" class="note-card__title">
+    {{note.title}}
+  </view>
+  <view class="note-card__content">
+    {{note.content || '新建笔记'}}
+  </view>
+</view>
