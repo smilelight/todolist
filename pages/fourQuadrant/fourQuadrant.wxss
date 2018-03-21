@@ -1,0 +1,36 @@
+/* pages/fourQuadrant/fourQuadrant.wxss */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.quadrant {
+  width: calc(100%/2 - 5rpx * 2 - 5rpx * 2);
+  height: calc(100%/2 - 5rpx * 2 - 5rpx * 2);
+  margin: 5rpx;
+  padding: 5rpx;
+  text-align: center;
+}
+
+.quadrant-title {
+  border-bottom: 3rpx dotted #B9B6C0;
+}
+
+.todo-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.todo-item {
+  
+}

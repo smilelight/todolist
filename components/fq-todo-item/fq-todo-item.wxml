@@ -1,0 +1,24 @@
+<!--components/fq-todo-item/fq-todo-item.wxml-->
+<view
+  class="todo-item todo-item--level{{ todo.level }} {{ todo.completed ? 'todo-item--completed' : '' }}">
+  <view class="todo-item__col1">
+    <todo-checkbox
+      class="todo-item__checkbox"
+      checked="{{ todo.completed }}"
+      bindchange="handleCompletedChange">
+    </todo-checkbox>
+  </view>
+  <view class="todo-item__col2">
+    <input
+      class="todo-item__title"
+      value="{{ todo.title }}"
+      placeholder="准备做什么？"
+      auto-focus="{{ autoFocus }}"
+      disabled='{{disAbled}}'>
+    </input>
+  </view>
+  <view class="todo-item__col3" bindtap="handleDateClick">
+    <!-- <text class="todo-item__date">{{ todo.date }}</text> -->
+    <picker class="todo-item__date" mode="date" bindchange="handleDateChange">{{ todo.date }}</picker>
+  </view>
+</view>

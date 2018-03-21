@@ -1,0 +1,12 @@
+<!--pages/flex/index.wxml-->
+<view class='page'>
+<view class='menu'></view>
+<view class='title'></view>
+<view class='content'>
+<view wx:for="{{array}}" class='item'>
+  {{item}} 
+</view>
+</view>
+<view class="todo-add" bindtap="handleAddTodo">+</view>
+</view>
+

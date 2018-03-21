@@ -12,5 +12,8 @@
   </view>
   <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top" style="{{translate}}">
         <image bindtap="tap_ch" src="../../assets/images/other_green.png"></image>
-    </view>
+        <view>fuck</view>
+        <view>fuck</view>
+        <view>fuck</view>
+    </view>   
 </view>

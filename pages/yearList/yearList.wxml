@@ -1,0 +1,9 @@
+<!--pages/yearList/yearList.wxml-->
+<view class='page'>
+  <view class='month' wx:for="{{monthes}}">
+    <view style='font-size:25rpx;line-hight:15rpx'>{{item}}</view>
+    <view class='day-container'>
+      <view class='day-item' wx:for="{{days}}">{{item}}</view>
+    </view>
+  </view>
+</view>

@@ -11,7 +11,17 @@
     "pages/statistics/statistics",
     "pages/synchronization/synchronization",
     "pages/calendar/calendar",
-    "pages/addTodo/addTodo"
+    "pages/addTodo/addTodo",
+    "pages/testChart/testChart",
+    "pages/monthList/monthList",
+    "pages/dayList/dayList",
+    "pages/lifeList/lifeList",
+    "pages/planList/planList",
+    "pages/yearList/yearList",
+    "pages/weekList/weekList",
+    "pages/fourQuadrant/fourQuadrant",
+    "pages/timerShaft/timerShaft",
+    "pages/fqTodoItemTest/fqTodoItemTest"
   ],
   "window": {
     "backgroundTextStyle": "light",

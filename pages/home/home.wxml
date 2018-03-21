@@ -15,6 +15,39 @@
   <button bindtap='navigateToCalendar'>Calendar</button>
 </view>
 -->
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='testChart' class='button'>图表测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='monthList' class='button'>月视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='dayList' class='button'>日视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='weekList' class='button'>周视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='yearList' class='button'>年视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='lifeList' class='button'>一生视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='planList' class='button'>计划视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='fourQuadrant' class='button'>四象限视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='timerShaft' class='button'>时间轴视图测试</button>
+</view>
+<view class='button-container'>
+    <button bindtap='navigateToPage' data-page='fqTodoItemTest' class='button'>四象限Todo测试</button>
+</view>
 <view class="page">
   <view class="todo-list">
     <view class="todo-header">

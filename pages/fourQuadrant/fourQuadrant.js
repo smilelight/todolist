@@ -1,10 +1,9 @@
-// pages/home/home.js
+// pages/fourQuadrant/fourQuadrant.js
 import Todo from '../../models/Todo'
 import todoStore from '../../store/todoStore'
 
 //获取应用实例
 const app = getApp()
-
 
 Page({
 
@@ -12,6 +11,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+    categories:[{
+      "title": "很重要-很紧急",
+        color:"#F1C9D9"
+    }, { 
+      "title": "很重要-不紧急", 
+      color:"#F1F1A7"
+    },
+    {
+      "title": "不重要-很紧急", 
+      color:"#C0EFFA"
+    }, 
+    { 
+      "title": "不重要-很紧急",
+      color:"#DCF9B0"
+    }],
     // todos
     todos: [],
 
@@ -41,7 +55,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // 为了新建后列表能更新，此逻辑必须写在 onShow 事件
     this.syncData()
   },
 
@@ -80,45 +93,11 @@ Page({
   
   },
 
-  //自定义方法
 
-  /**
-   * 转向calendar控件
-   */
-  navigateToCalendar: function (){
-    wx.navigateTo({
-      url: '../calendar/calendar',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-  },
-
-  navigateToChartTest: function (){
-    wx.navigateTo({
-      url: '../testChart/index',
-    })
-  },
-
-  navigateToFlexTest: function (){
-    wx.navigateTo({
-      url: '../flex/index',
-    })
-  },
-
-  navigateToPage: function(e){
-    var page = e.currentTarget.dataset.page;
-    wx.navigateTo({
-      url: '../'+page+'/'+page,
-    })
-  },
-
-  /**
-   * 同步数据
-   */
   syncData() {
     // 获取列表
     this.data.todos = todoStore.getTodos()
+    this.data.todos.forEach(todo=>console.log(todo.level));
     this.update()
     // 更新置顶标题
     let uncompletedCount = todoStore.getUncompletedTodos().length
@@ -131,63 +110,10 @@ Page({
     }, 2000)
   },
 
-  /**
-   * Todo 数据改变事件
-   */
-  handleTodoItemChange(e) {
-    let index = e.currentTarget.dataset.index
-    let todo = e.detail.data.todo
-    let item = this.data.todos[index]
-    Object.assign(item, todo)
-    this.update()
-  },
-
-  /**
-   * Todo 长按事件
-   */
-  handleTodoLongTap(e) {
-    // 获取 index
-    let index = e.currentTarget.dataset.index
-    wx.showModal({
-      title: '删除提示',
-      content: '确定要删除这项任务吗？',
-      success: (e) => {
-        if (e.confirm) {
-          this.data.todos.splice(index, 1)
-          this.update()
-        }
-      }
-    })
-  },
-
-  /**
-   * 更新数据
-   */
   update(data) {
     data = data || this.data
     data.completedCount = todoStore.getCompletedTodos().length
     data.uncompletedCount = todoStore.getUncompletedTodos().length
     this.setData(data)
   },
-
-  /**
-   * 新建事件
-   */
-  handleAddTodo(e) {
-    wx.navigateTo({
-      url: '../addTodo/addTodo'
-    })
-  },
-
-  handleTap(e) {
-    let index = e.currentTarget.dataset.index;
-    let todo = this.data.todos[index];
-    let todo_str = JSON.stringify(todo);
-    wx.navigateTo({
-      url: '../addTodo/addTodo?todo='+todo_str,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  }
 })

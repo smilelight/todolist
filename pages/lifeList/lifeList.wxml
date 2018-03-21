@@ -1,0 +1,16 @@
+<!--pages/lifeList/lifeList.wxml-->
+<view class='sui'>岁</view>
+<view class='_'>╲</view>
+<view class='yue'>月</view>
+<view class='month-title'>
+<view wx:for="{{month}}" class='month-item'>{{item}}</view>
+</view>
+<view class='life-list-page'>
+<view wx:for="{{data}}" class='row'>
+<!-- <label class="item" style='color:{{index%2 == 0? colorA : colorB }}'></label> -->
+<!-- <label class="item"></label> -->
+<view wx:if="{{index%12 == 0}}" class='age'>
+{{index/12+1}}</view>
+ <view class='ttt'></view> 
+</view>
+</view>

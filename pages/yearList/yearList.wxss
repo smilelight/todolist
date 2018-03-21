@@ -1,0 +1,50 @@
+/* pages/yearList/yearList.wxss */
+.page {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.month {
+  width: calc(100%/3 - 5rpx * 2 - 5rpx * 2);
+  height: calc(100%/4 - 5rpx * 2 - 4rpx * 2);
+  background-color: #b6f6f9;
+  margin: 5rpx;
+  padding: 5rpx;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.day-container {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.day-item {
+  width: calc(100%/7 - 2rpx * 2 - 1rpx * 2);
+  height: calc(100%7 - 2rpx * 2 - 2rpx * 2);
+  background-color: #ffe4af;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 25rpx;
+  margin: 1rpx;
+  padding: 1rpx;
+}
