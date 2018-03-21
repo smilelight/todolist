@@ -1,1 +1,77 @@
 /* pages/weekList/weekList.wxss */
+
+.page {
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hour-title {
+  margin-top: 60rpx;
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hour-title-item {
+  width: calc(100% - 4rpx);
+  flex: 1;
+  text-align: center;
+  height: calc(100rpx - 4rpx);
+  line-height: 100rpx;
+  background-color: #CCEBFF;
+  border: 2rpx solid #FCE0F6;
+
+}
+
+.week {
+  flex:7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.week-title {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.week-title-item {
+  flex: 1;
+  text-align: center;
+  border: 2rpx solid #CCEBFF;
+  background-color: #FCE0F6;
+}
+
+.week-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.week-content-item {
+  /* width: calc(100%/7 - 2rpx); */
+  width: calc(100%/7 - 4rpx);
+   background-color: #C9CFCE; 
+   /* margin: 1rpx;  */
+  border-color:#8EE9E9;
+  border-width: 2rpx;
+  border-style: solid;
+  text-align: center;
+  height: 46rpx;
+}

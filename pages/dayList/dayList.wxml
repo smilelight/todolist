@@ -1,2 +1,19 @@
 <!--pages/dayList/dayList.wxml-->
-<text>pages/dayList/dayList.wxml</text>
+<view class='page'>
+  <view class='day-title'>
+  <view>日计划列表</view>
+  </view>
+  <view class='day-content'>
+    <view class='day-hour-bar'>
+      <view class='day-hour-bar-item' wx:for="{{hour_titles}}" wx:key="{{index}}">
+      {{item}}
+      </view>
+    </view>
+    <view class='day-hour-content'>
+      <view class='day-hour-context-item' wx:for="{{day_hour_items}}" wx:key="{{index}}">
+      {{item}}
+        <view class='day-hour-todo-item'></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,51 @@
 /* pages/dayList/dayList.wxss */
+
+.page {
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+}
+
+.day-title {
+  text-align: center;
+}
+
+.day-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.day-hour-bar {
+  flex: 1;
+  margin: 10rpx;
+  margin-right: 0;
+}
+
+.day-hour-content {
+  flex: 7;
+  margin: 10rpx;
+  margin-left: 3rpx;
+}
+
+.day-hour-bar-item {
+  height: 100rpx;
+  background-color: #B8F1F1;
+  border: 3rpx solid #FCBDAD;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.day-hour-context-item {
+  height: 100rpx;
+  background-color: #D8C4F6;
+  border: 3rpx solid #CCEBFF;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.day-hour-todo-item {
+
+}

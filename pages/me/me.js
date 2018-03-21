@@ -28,6 +28,9 @@ Page({
       },{
         zh: "设置",
         url: "settings/settings"
+      },{
+        zh:"关于",
+        url: "about/about"
       }
     ]
   },

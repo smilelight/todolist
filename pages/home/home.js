@@ -20,7 +20,7 @@ Page({
     completedCount: 0,
 
     // 是否动画延迟
-    delay: true
+    // delay: true
   },
 
   /**
@@ -126,9 +126,9 @@ Page({
     let title = ['TodoList（进行中: ', uncompletedCount, ', 今日已完成: ', todayCompletedCount, '）'].join('')
     wx.setTopBarText({ text: title })
     // 动画结束后取消动画队列延迟
-    setTimeout(() => {
-      this.update({ delay: false })
-    }, 2000)
+    // setTimeout(() => {
+    //   this.update({ delay: false })
+    // }, 2000)
   },
 
   /**

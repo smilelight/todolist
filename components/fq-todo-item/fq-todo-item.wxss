@@ -2,7 +2,8 @@
 .todo-item {
   /* width: calc(100% - 10rpx); */
   display: flex;
-  background: #FFF;
+   background: #FFF; 
+  /* background-color: rgba(212,230,226, 0.3); */
   border-left: 5rpx solid red;
   font-size: 15rpx;
   align-items: center;
@@ -43,7 +44,8 @@
 }
 
 .todo-item__icon {
-  color: white !important;
+  /* color: white !important; */
+  /* color: rgba(255, 255, 255, 0.1) !important;无法通过在wxss文件中设置color属性来设置颜色，应该在wxml中icon组件的color属性来设置颜色 */
   border: 5rpx solid #3cc51f;
   vertical-align: middle;
   padding: 2rpx;

@@ -1,2 +1,20 @@
 <!--pages/weekList/weekList.wxml-->
-<text>pages/weekList/weekList.wxml</text>
+<view class='page'>
+  <view class='hour-title'>
+    <view class='hour-title-item' wx:for="{{hour_titles}}">
+    {{item}}
+    </view>
+  </view>
+  <view class='week'>
+    <view class='week-title'>
+      <view class='week-title-item' wx:for="{{week_titles}}">
+      {{item.day}}
+      </view>
+    </view>
+    <view class='week-content'>
+      <view class='week-content-item' wx:for="{{weeks}}">
+      {{item}}
+      </view>
+    </view>
+  </view>
+</view>

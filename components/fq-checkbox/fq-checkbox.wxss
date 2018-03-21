@@ -6,11 +6,12 @@
 }
 
 .todo-checkbox__icon {
-  color: white !important;
+  /* color: white !important; *//*无法通过color属性设置icon的颜色*/
   border: 2rpx solid #3cc51f;
   padding: 2rpx;
+  /* background: #B5B5F4; */
 }
 
 .todo-checkbox--checked .todo-checkbox__icon{
-  border-color: #C1C5C8 !important;
+  /* border-color: #C1C5C8 !important; */
 }

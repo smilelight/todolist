@@ -21,7 +21,8 @@
     "pages/weekList/weekList",
     "pages/fourQuadrant/fourQuadrant",
     "pages/timerShaft/timerShaft",
-    "pages/fqTodoItemTest/fqTodoItemTest"
+    "pages/fqTodoItemTest/fqTodoItemTest",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
