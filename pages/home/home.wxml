@@ -15,10 +15,10 @@
   <button bindtap='navigateToCalendar'>Calendar</button>
 </view>
 -->
-<view class='button-container'>
+<view class='button-container' wx:if="{{false}}">
     <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>
 </view>
-<view class='button-container'>
+<view class='button-container' wx:if="{{false}}">
     <button bindtap='navigateToPage' data-page='testChart' class='button'>图表测试</button>
 </view>
 <view class='button-container'>
@@ -48,7 +48,7 @@
 <view class='button-container'>
     <button bindtap='navigateToPage' data-page='fqTodoItemTest' class='button'>四象限Todo测试</button>
 </view>
-<view class="page">
+<view class="page" wx:if="{{false}}">
   <view class="todo-list">
     <view class="todo-header">
       进行中

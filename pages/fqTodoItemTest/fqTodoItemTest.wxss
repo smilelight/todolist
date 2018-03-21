@@ -1,1 +1,10 @@
 /* pages/fqTodoItemTest/fqTodoItemTest.wxss */
+.todo-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

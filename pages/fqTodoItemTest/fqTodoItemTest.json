@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "四象限Todo测试",
+  "usingComponents": {
+    "todo-item": "/components/fq-todo-item/fq-todo-item",
+    "tips-info": "/components/tips-info/tips-info"
+  }
+}

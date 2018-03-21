@@ -1,2 +1,13 @@
 <!--pages/fqTodoItemTest/fqTodoItemTest.wxml-->
-<text>pages/fqTodoItemTest/fqTodoItemTest.wxml</text>
+<view class='todo-container'>
+  <view style='width:100%'
+    wx:for="{{ todos }}"
+    wx:key="{{ index }}">
+    <todo-item
+      class="todo-item"
+      todo="{{ item }}"
+      data-index="{{ index }}"
+      >
+    </todo-item>
+  </view>
+</view>

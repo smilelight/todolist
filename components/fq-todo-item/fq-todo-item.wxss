@@ -1,10 +1,12 @@
 /* components/fq-todo-item/fq-todo-item.wxss */
 .todo-item {
+  /* width: calc(100% - 10rpx); */
   display: flex;
   background: #FFF;
-  border-left: 8rpx solid red;
-  font-size: 32rpx;
-  padding: 22rpx 15rpx; 
+  border-left: 5rpx solid red;
+  font-size: 15rpx;
+  align-items: center;
+  /* padding: 5rpx;  */
   /* border-bottom: 1rpx dashed #f0f3ff;  */
   border-bottom: 1rpx solid #f0f3ff;
 }
@@ -36,8 +38,7 @@
 
 .todo-item__checkbox {
   display: inline-block;
-  padding: 0 32rpx 0 20rpx;
-  padding-bottom: 4px;
+  padding: 5rpx;
   vertical-align: middle;
 }
 
@@ -45,7 +46,7 @@
   color: white !important;
   border: 5rpx solid #3cc51f;
   vertical-align: middle;
-  padding: 3rpx;
+  padding: 2rpx;
 }
 
 .todo-item__title {
@@ -60,7 +61,7 @@
 }
 
 .todo-item__date {
-  font-size: 28rpx;
+  font-size: 15rpx;
   color: #ccc;
   display: inline-block;
   text-align: center;

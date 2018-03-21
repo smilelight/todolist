@@ -3,7 +3,7 @@
   <view class='quadrant' wx:for="{{categories}}" wx:for-index="qua_index" wx:for-item="qua_item" wx:key="{{qua_index}}"style='background-color:{{qua_item.color}}'>
     <view class='quadrant-title'>{{qua_item.title}}</view>
     <view class='todo-container'>
-        <view
+        <view style='width:100%'
         wx:for="{{ todos }}"
         wx:key="{{ index }}"
         wx:if="{{ item.level == qua_index+1 }}">
