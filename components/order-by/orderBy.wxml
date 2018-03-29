@@ -1,6 +1,12 @@
 <!--components/order-by/orderBy.wxml-->
 <view class='order-container'>
-<view class='order-item' wx:for="{{orders}}" wx:key="{{index}}">
-<text bindtap='orderBy' data-index="{{index}}">{{item}}</text>
-</view>
+  <view class='order-item' wx:for="{{orders}}" wx:key="{{index}}">
+    <view bindtap='orderBy' data-index="{{index}}">
+      {{item}}
+      <view wx:if="{{orderIndex == index}}" style='display:inline' data-index="{{index}}">
+        <text wx:if="{{orderDirection}}" data-index="{{index}}">▲</text>
+        <text wx:if="{{!orderDirection}}" data-index="{{index}}">▼</text>
+      </view>
+    </view>
+  </view>
 </view>

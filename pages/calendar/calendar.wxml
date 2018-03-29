@@ -23,6 +23,12 @@
     </view>
   </view>
 </view>
+
+
+<view wx:if="{{true}}">
+  <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
+</view>
+
 <!-- <view class="show_box">选中日期：{{selectedDate}} {{selectedWeek}}</view> -->
 <view class="page">
   <view class="todo-list">

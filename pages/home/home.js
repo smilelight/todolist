@@ -195,30 +195,28 @@ Page({
   },
 
   handOrderTap(e) {
-    // this.fuck = this.selectComponent("#fuck")
-    // console.log(this.fuck)
-    // console.log(this.fuck.properties == this.fuck.fata)
-    // this.fuck.loghaha()
-    
+    this.fuck = this.selectComponent("#fuck")
+    console.log(this.fuck)
+    console.log(this.fuck.properties == this.fuck.fata)
   },
 
   handleOrderBy(e){
     let todoManager = new TodoManager(this.data.todos)
-    // console.log(e.detail)
+    console.log(e.detail)
     switch(e.detail.index) {
       case 0:
         this.setData({
-          todos: todoManager.todoOrder("dataAndtime",1)
+          todos: todoManager.todoOrder(todoManager.orderTags[2], e.detail.direction)//按日期和时间排序
         })
         break
       case 1:
         this.setData({
-          todos: todoManager.todoOrder("category",1)
+          todos: todoManager.todoOrder(todoManager.orderTags[3], e.detail.direction)//按类别排序
         })
         break
       case 2:
         this.setData({
-          todos: todoManager.todoOrder("level",1)
+          todos: todoManager.todoOrder(todoManager.orderTags[4], e.detail.direction)//按优先级排序
         })
         break
     }

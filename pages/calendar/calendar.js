@@ -1,6 +1,7 @@
 // pages/others/this.calendar/this.calendar.js
 import Todo from '../../models/Todo'
 import todoStore from '../../store/todoStore'
+import TodoManager from '../../utils/todoManager'
 
 //获取应用实例
 const app = getApp()
@@ -24,7 +25,9 @@ Page({
     completedCount: 0,
 
     // 是否动画延迟
-    delay: false
+    delay: false,
+
+    orders: ["时间", "类别", "优先级"]
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -99,9 +102,11 @@ Page({
     // console.log('选中', e.currentTarget.dataset.date.value);
     vm.setData({
       selectedDate: e.currentTarget.dataset.date.value,
-      selectedWeek: vm.data.weekArr[e.currentTarget.dataset.date.week],
-      todos: vm.todosFilter()
+      selectedWeek: vm.data.weekArr[e.currentTarget.dataset.date.week]
     });
+    vm.setData({
+      todos: vm.todosFilter()
+    })
   },
   preMonth: function () {
     // 上个月
@@ -210,11 +215,40 @@ Page({
   },
   
   todosFilter() {
-    let todos = todoStore.getTodos()
-    console.log(this.data.selectedDate)
-    console.log(todos[0].date)
-    console.log(todos[0].date.replace(/\//g, '-').replace(/\-0/,"-"))
+    //let todos = todoStore.getTodos()
+    // console.log(this.data.selectedDate)
+    // console.log(todos[0].date)
+    // console.log(todos[0].date.replace(/\//g, '-').replace(/\-0/,"-"))
     return todoStore.getTodos().filter(todo => todo.date.replace(/\//g, '-').replace(/\-0/g, "-") == this.data.selectedDate)
-  }
+  },
 
+  handOrderTap(e) {
+    // this.fuck = this.selectComponent("#fuck")
+    // console.log(this.fuck)
+    // console.log(this.fuck.properties == this.fuck.fata)
+    // this.fuck.loghaha()
+
+  },
+
+  handleOrderBy(e) {
+    let todoManager = new TodoManager(this.data.todos)
+    console.log(e.detail)
+    switch (e.detail.index) {
+      case 0:
+        this.setData({
+          todos: todoManager.todoOrder(todoManager.orderTags[2], e.detail.direction)//按日期和时间排序
+        })
+        break
+      case 1:
+        this.setData({
+          todos: todoManager.todoOrder(todoManager.orderTags[3], e.detail.direction)//按类别排序
+        })
+        break
+      case 2:
+        this.setData({
+          todos: todoManager.todoOrder(todoManager.orderTags[4], e.detail.direction)//按优先级排序
+        })
+        break
+    }
+  }
 })

@@ -31,21 +31,26 @@
 }
 
 .day-hour-bar-item {
-  height: 100rpx;
+  /* height: 100rpx; */
   background-color: #B8F1F1;
   border: 3rpx solid #FCBDAD;
-  line-height: 100rpx;
+  /* line-height: 100rpx; */
   text-align: center;
 }
 
 .day-hour-context-item {
-  height: 100rpx;
+  /* height: 100rpx; */
   background-color: #D8C4F6;
   border: 3rpx solid #CCEBFF;
-  line-height: 100rpx;
+  /* line-height: 100rpx; */
   text-align: center;
 }
 
 .day-hour-todo-item {
 
+}
+
+.item {
+  display: inline-block;
+  width: 100%;
 }

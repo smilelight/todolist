@@ -1,17 +1,22 @@
 <!--pages/dayList/dayList.wxml-->
 <view class='page'>
   <view class='day-title'>
-  <view>日计划列表</view>
+    <view>日计划列表</view>
   </view>
+  <order-by id="orderby" orders="{{[1,2,3]}}"></order-by>
   <view class='day-content'>
     <view class='day-hour-bar'>
       <view class='day-hour-bar-item' wx:for="{{hour_titles}}" wx:key="{{index}}">
-      {{item}}
+        <view id="hour-bar-{{index}}" class='item' bindtap='handleTap' style='height:calc(100rpx + {{bar_item_sizes[index].height}} * 50rpx);line-height:calc(100rpx + {{bar_item_sizes[index].height}} * 50rpx)'>
+        {{item}}
+        </view>
       </view>
     </view>
     <view class='day-hour-content'>
       <view class='day-hour-context-item' wx:for="{{day_hour_items}}" wx:key="{{index}}">
-      {{item}}
+        <view id="hour_todo_{{index}}" class='item' bindtap='handleTap' style='height:calc(100rpx + {{todo_item_sizes[index].height}} * 50rpx);line-height: calc(100rpx + {{todo_item_sizes[index].height}} * 50rpx)'>
+        {{item}}
+        </view>
         <view class='day-hour-todo-item'></view>
       </view>
     </view>

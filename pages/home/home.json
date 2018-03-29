@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "任务",
   "usingComponents": {
-    "todo-item": "/components/todo-item/todo-item",
+    "todo-item": "/components/todo-item-mini/todo-item-mini",
     "tips-info": "/components/tips-info/tips-info",
     "order-by": "/components/order-by/orderBy"
   }

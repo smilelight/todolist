@@ -15,7 +15,7 @@
   <button bindtap='navigateToCalendar'>Calendar</button>
 </view>
 -->
-<view wx:if="{{false}}">
+<view wx:if="{{true}}">
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>
   </view>
@@ -55,7 +55,7 @@
   <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
 </view>
 
-<view class="page" wx:if="{{true}}">
+<view class="page" wx:if="{{false}}">
   <view class="todo-list">
     <view class="todo-header">
       进行中

@@ -1,0 +1,28 @@
+<!--components/todo-item/todo-item.wxml-->
+<view
+  class="todo-item todo-item--level{{ todo.level }} {{ todo.completed ? 'todo-item--completed' : '' }}">
+  <view class="todo-item__col1">
+    <todo-checkbox
+      class="todo-item__checkbox"
+      checked="{{ todo.completed }}"
+      bindchange="handleCompletedChange">
+    </todo-checkbox>
+  </view>
+  <view wx:if="{{false}}"> <image src= "/assets/images/{{categories_images[todo.category - 1]}}.png" class='todo-item-image'></image></view>
+  <view class='todo-item__category category{{todo.category - 1}}'>{{categories[todo.category - 1]}}</view>
+  <view class="todo-item__col2">
+    <input
+      class="todo-item__title"
+      value="{{ todo.title }}"
+      placeholder="准备做什么？"
+      auto-focus="{{ autoFocus }}"
+      disabled='{{disAbled}}'>
+    </input>
+  </view>
+  <view class="todo-item__col3">
+    <view class="todo-item__date">{{ todo.date }}</view>
+  </view>
+  <view class="todo-item__col3">
+    <view class="todo-item__time">{{ todo.time }}</view>
+  </view>
+</view>
