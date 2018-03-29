@@ -14,11 +14,16 @@
       value="{{ todo.title }}"
       placeholder="准备做什么？"
       auto-focus="{{ autoFocus }}"
-      disabled='{{disAbled}}'>
+      disabled='{{disAbled}}'
+      bindchange="handleTitleChange">
     </input>
   </view>
   <view class="todo-item__col3" bindtap="handleDateClick">
     <!-- <text class="todo-item__date">{{ todo.date }}</text> -->
     <picker class="todo-item__date" mode="date" bindchange="handleDateChange">{{ todo.date }}</picker>
+  </view>
+  <view class="todo-item__col3" bindtap="handleTimeClick">
+    <!-- <text class="todo-item__date">{{ todo.date }}</text> -->
+    <picker class="todo-item__time" mode="time" bindchange="handleTimeChange" value="{{todo.time}}">{{ todo.time }}</picker>
   </view>
 </view>

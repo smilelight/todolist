@@ -11,10 +11,12 @@ class Todo extends Model {
       title: '',
       desc: '',
       date: new Date(),
-      level: 2,
+      time: new Date(),
+      level: 2,//1：紧急且重要，2：重要不紧急，3：紧急不重要，4：不紧急不重要
       completed: false,
       createdAt: new Date(),
-      completedAt: new Date()
+      completedAt: new Date(),
+      category: 1,//1：读书，2：锻炼，3：学习，4：社交，5：编程，6：其他
     }, model)
 
     // 日期格式化
@@ -27,7 +29,13 @@ class Todo extends Model {
     if (this.completedAt.constructor === Date) {
       this.completedAt = util.formatTime(this.completedAt)
     }
+    if (this.time.constructor === Date) {
+      this.time = util.formatMyTime(this.time)
+    }
   }
 }
+
+Todo.levels = ['紧急且重要', '重要不紧急', '紧急不重要', '不紧急不重要']
+Todo.categories = ['读书', '锻炼', '学习', '社交', '编程', '其他']
 
 export default Todo

@@ -20,6 +20,18 @@
         </picker>
       </label>
     </view>
+     <view class="field-item">
+      <label class="field-label">类别</label>
+      <label class="field-control">
+        <picker
+          class="w-full"
+          range="{{ categories}}"
+          value="{{ todo.category - 1 }}"
+          bindchange="handleCategoryChange">
+          {{ categories[todo.category - 1] }}
+        </picker>
+      </label>
+    </view>
     <view class="field-item">
       <label class="field-label">描述</label>
       <label class="field-control">

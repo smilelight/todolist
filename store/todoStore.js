@@ -24,61 +24,82 @@ class TodoStore extends Store {
       title: '欢迎使用TodoList',
       completed: false,
       level: 1,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '点击左边勾选框完成一项任务',
       completed: false,
       level: 1,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '点击标题可以编辑任务哦',
       completed: false,
       level: 2,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '点击右边日期可修改日期',
       completed: false,
       level: 3,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '点击下面的 + 新建一项任务吧',
       completed: false,
       level: 4,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '长按可删除任务',
       completed: false,
       level: 4,
-      createdAt: new Date()
+      category: 1,
+      createdAt: new Date(),
+      time: new Date()
     }), new Todo({
       title: '这是一条已完成的任务1',
       completed: true,
       level: 4,
+      category: 1,
       date: new Date('2017/11/18'),
       createdAt: new Date(),
-      completedAt: new Date('2017/11/18')
+      completedAt: new Date('2017/11/18'),
+      time: new Date()
     }), new Todo({
       title: '这是一条已完成的任务2',
       completed: true,
       level: 4,
+      category: 1,
       date: new Date('2017/11/19'),
       createdAt: new Date(),
-      completedAt: new Date('2017/11/19')
+      completedAt: new Date('2017/11/19'),
+      time: new Date()
     }), new Todo({
       title: '这是一条已完成的任务3',
       completed: true,
       level: 4,
+      category: 1,
       date: new Date('2017/11/20'),
       createdAt: new Date(),
-      completedAt: new Date('2017/11/20')
+      completedAt: new Date('2017/11/20'),
+      time: new Date()
     }), new Todo({
       title: '这是一条已完成的任务4',
       completed: true,
       level: 4,
+      category: 1,
       date: new Date('2017/11/20'),
       createdAt: new Date(),
-      completedAt: new Date('2017/11/20')
+      completedAt: new Date('2017/11/20'),
+      time: new Date()
     })])
+    this.todos.forEach((value)=>console.log(value.time))
     this.save()
     wx.setStorageSync('__todos_inited__', true)
   }

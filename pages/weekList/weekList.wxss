@@ -24,8 +24,8 @@
   width: calc(100% - 4rpx);
   flex: 1;
   text-align: center;
-  height: calc(100rpx - 4rpx);
-  line-height: 100rpx;
+  height: calc(104rpx - 4rpx);
+  line-height: 104rpx;
   background-color: #CCEBFF;
   border: 2rpx solid #FCE0F6;
 
@@ -66,12 +66,12 @@
 
 .week-content-item {
   /* width: calc(100%/7 - 2rpx); */
-  width: calc(100%/7 - 4rpx);
+  width: calc(100%/7 - 6rpx);
    background-color: #C9CFCE; 
    /* margin: 1rpx;  */
   border-color:#8EE9E9;
-  border-width: 2rpx;
+  border-width: 3rpx;
   border-style: solid;
   text-align: center;
-  height: 46rpx;
+  height: 48rpx;
 }

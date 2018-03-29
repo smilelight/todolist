@@ -13,6 +13,14 @@ const formatTime = (date, hasTime) => {
   return result
 }
 
+const formatMyTime = (date, hasSecond) =>{
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+  let result = hour + ':' + minute + (hasSecond ? ":" + second :"")
+  return result;
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -27,5 +35,6 @@ const uuid = () => {
 
 module.exports = {
   formatTime: formatTime,
-  uuid: uuid
+  uuid: uuid,
+  formatMyTime: formatMyTime
 }

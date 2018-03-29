@@ -1,4 +1,6 @@
 /* pages/others/calendar/calendar.wxss */
+@import "../../assets/wxss/todo.wxss";
+@import "../../assets/wxss/mytodotest.wxss";
 
 .selected_date {
   padding: 20rpx;
@@ -12,7 +14,7 @@
 
 .calendar_panel {
   width: 100%;
-  height: 600rpx;
+  /* height: 600rpx; */
 }
 
 .calendar_box {

@@ -12,7 +12,7 @@
     <view class='index-bd'>
       <view class='kind-list'>
         <view class='kind-list-item kind-list-item-bd kind-list-item-bd-show navigator-box navigator-box-show'>
-          <block wx:for="{{list}}">
+          <block wx:for="{{list}}" wx:key="{{index}}">
             <navigator url="../{{item.url}}" class="navigator">
               <view class="navigator-text">{{item.zh}}</view>
               <view class="navigator-arrow"></view>

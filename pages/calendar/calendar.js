@@ -1,4 +1,10 @@
 // pages/others/this.calendar/this.calendar.js
+import Todo from '../../models/Todo'
+import todoStore from '../../store/todoStore'
+
+//获取应用实例
+const app = getApp()
+
 Page({
   data: {
     selectedDate: '',//选中的几月几号
@@ -9,7 +15,16 @@ Page({
       31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     ],
     weekArr: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
-    dateList: []
+    dateList: [],
+
+    todos: [],
+
+    // todo 计数
+    uncompletedCount: 0,
+    completedCount: 0,
+
+    // 是否动画延迟
+    delay: false
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -30,15 +45,19 @@ Page({
       selectedDate: y + '-' + mon + '-' + d,
       selectedWeek: this.data.weekArr[i]
     });
-
+    this.syncData()
     this.getDateList(y, mon - 1);
+  },
+  onHide: function () {
+    this.syncData()
   },
   getDateList: function (y, mon) {
     var vm = this;
     //如果是否闰年，则2月是29日
     var daysCountArr = this.data.daysCountArr;
     if (y % 4 == 0 && y % 100 != 0) {
-      this.data.daysCountArr[1] = 29;
+      // this.data.daysCountArr[1] = 29;
+      daysCountArr[1] = 29;
       this.setData({
         daysCountArr: daysCountArr
       });
@@ -80,7 +99,8 @@ Page({
     // console.log('选中', e.currentTarget.dataset.date.value);
     vm.setData({
       selectedDate: e.currentTarget.dataset.date.value,
-      selectedWeek: vm.data.weekArr[e.currentTarget.dataset.date.week]
+      selectedWeek: vm.data.weekArr[e.currentTarget.dataset.date.week],
+      todos: vm.todosFilter()
     });
   },
   preMonth: function () {
@@ -112,5 +132,89 @@ Page({
     });
 
     vm.getDateList(curYear, curMonth - 1);
+  },
+
+  syncData() {
+    // 获取列表
+    this.data.todos = todoStore.getTodos()
+    this.data.todos = this.todosFilter()
+    this.update()
+    // 更新置顶标题
+    let uncompletedCount = todoStore.getUncompletedTodos().length
+    let todayCompletedCount = todoStore.getTodayCompletedTodos().length
+    let title = ['TodoList（进行中: ', uncompletedCount, ', 今日已完成: ', todayCompletedCount, '）'].join('')
+    wx.setTopBarText({ text: title })
+    // 动画结束后取消动画队列延迟
+    // setTimeout(() => {
+    //   this.update({ delay: false })
+    // }, 2000)
+  },
+
+  /**
+   * Todo 数据改变事件
+   */
+  handleTodoItemChange(e) {
+    let index = e.currentTarget.dataset.index
+    let todo = e.detail.data.todo
+    let item = this.data.todos[index]
+    Object.assign(item, todo)
+    this.update()
+  },
+
+  /**
+   * Todo 长按事件
+   */
+  handleTodoLongTap(e) {
+    // 获取 index
+    let index = e.currentTarget.dataset.index
+    wx.showModal({
+      title: '删除提示',
+      content: '确定要删除这项任务吗？',
+      success: (e) => {
+        if (e.confirm) {
+          this.data.todos.splice(index, 1)
+          this.update()
+        }
+      }
+    })
+  },
+
+  /**
+   * 更新数据
+   */
+  update(data) {
+    data = data || this.data
+    data.completedCount = todoStore.getCompletedTodos().length
+    data.uncompletedCount = todoStore.getUncompletedTodos().length
+    this.setData(data)
+  },
+  /**
+   * 新建事件
+   */
+  handleAddTodo(e) {
+    wx.navigateTo({
+      url: '../addTodo/addTodo'
+    })
+  },
+
+  handleTap(e) {
+    let index = e.currentTarget.dataset.index;
+    let todo = this.data.todos[index];
+    let todo_str = JSON.stringify(todo);
+    wx.navigateTo({
+      url: '../addTodo/addTodo?todo=' + todo_str,
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+  
+  todosFilter() {
+    let todos = todoStore.getTodos()
+    console.log(this.data.selectedDate)
+    console.log(todos[0].date)
+    console.log(todos[0].date.replace(/\//g, '-').replace(/\-0/,"-"))
+    return todoStore.getTodos().filter(todo => todo.date.replace(/\//g, '-').replace(/\-0/g, "-") == this.data.selectedDate)
   }
+
 })

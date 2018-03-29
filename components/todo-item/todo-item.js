@@ -48,9 +48,18 @@ Component({
     handleDateClick (e) {
       console.info(e)
     },
+    
+    handleTimeClick (e) {
+      console.info(e)
+    },
 
     handleDateChange (e) {
       this.data.todo.date = e.detail.value.replace(/\-/g, '/')
+      this.update()
+    },
+
+    handleTimeChange(e) {
+      this.data.todo.time = e.detail.value
       this.update()
     },
 

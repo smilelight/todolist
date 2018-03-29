@@ -16,7 +16,8 @@ Page({
     todo: null,
     addOrModify:false,//false表示无参数传入，为新增任务，true表示有参数传入，为修改任务
     // 级别
-    levels: ['紧急且重要', '重要不紧急', '紧急不重要', '不紧急不重要']
+    levels: Todo.levels,
+    categories: Todo.categories
   },
 
   /**
@@ -54,6 +55,14 @@ Page({
    */
   handleLevelChange(e) {
     this.data.todo.level = parseInt(e.detail.value) + 1
+    this.update()
+  },
+
+  /**
+   * 类别改变事件
+   */
+  handleCategoryChange(e) {
+    this.data.todo.category = parseInt(e.detail.value) + 1
     this.update()
   },
 

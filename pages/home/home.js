@@ -1,6 +1,7 @@
 // pages/home/home.js
 import Todo from '../../models/Todo'
 import todoStore from '../../store/todoStore'
+import TodoManager from '../../utils/todoManager'
 
 //获取应用实例
 const app = getApp()
@@ -21,6 +22,8 @@ Page({
 
     // 是否动画延迟
     // delay: true
+
+    orders: ["时间", "类别", "优先级"]
   },
 
   /**
@@ -189,5 +192,35 @@ Page({
       fail: function (res) { },
       complete: function (res) { },
     })
+  },
+
+  handOrderTap(e) {
+    // this.fuck = this.selectComponent("#fuck")
+    // console.log(this.fuck)
+    // console.log(this.fuck.properties == this.fuck.fata)
+    // this.fuck.loghaha()
+    
+  },
+
+  handleOrderBy(e){
+    let todoManager = new TodoManager(this.data.todos)
+    // console.log(e.detail)
+    switch(e.detail.index) {
+      case 0:
+        this.setData({
+          todos: todoManager.todoOrder("dataAndtime",1)
+        })
+        break
+      case 1:
+        this.setData({
+          todos: todoManager.todoOrder("category",1)
+        })
+        break
+      case 2:
+        this.setData({
+          todos: todoManager.todoOrder("level",1)
+        })
+        break
+    }
   }
 })

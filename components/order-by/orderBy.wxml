@@ -1,0 +1,6 @@
+<!--components/order-by/orderBy.wxml-->
+<view class='order-container'>
+<view class='order-item' wx:for="{{orders}}" wx:key="{{index}}">
+<text bindtap='orderBy' data-index="{{index}}">{{item}}</text>
+</view>
+</view>

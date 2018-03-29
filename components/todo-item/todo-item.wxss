@@ -65,3 +65,11 @@
   display: inline-block;
   text-align: center;
 }
+
+.todo-item__time {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
