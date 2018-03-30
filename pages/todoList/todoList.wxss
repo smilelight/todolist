@@ -1,6 +1,6 @@
 /* pages/todo/todo.wxss */
 /* pages/me/me.wxss */
-@import "../common/index.wxss";
+/* @import "../common/index.wxss";
 
 .userinfo {
   display: flex;
@@ -21,5 +21,6 @@
 
 .usermotto {
   margin-top: 200px;
-}
+} */
 
+@import "../../assets/wxss/todo.wxss";

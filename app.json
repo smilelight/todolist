@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/home/home",
     "pages/me/me",
-    "pages/todo/todo",
+    "pages/todoList/todoList",
     "pages/logs/logs",
     "pages/history/history",
     "pages/settings/settings",
@@ -22,7 +22,13 @@
     "pages/fourQuadrant/fourQuadrant",
     "pages/timerShaft/timerShaft",
     "pages/fqTodoItemTest/fqTodoItemTest",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/notelist/noteList",
+    "pages/addNote/addNote",
+    "pages/targetList/targetList",
+    "pages/noteList/noteList",
+    "pages/addPlan/addPlan",
+    "pages/addTarget/addTarget"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,22 +43,34 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/todo/todo",
-        "text": "任务",
-        "iconPath": "assets/images/activity_black.png",
-        "selectedIconPath": "assets/images/activity_green.png"
+        "pagePath": "pages/todoList/todoList",
+        "text": "todo",
+        "iconPath": "assets/images/todolist_black.png",
+        "selectedIconPath": "assets/images/todolist_green.png"
+      },
+      {
+        "pagePath": "pages/noteList/noteList",
+        "text": "note",
+        "iconPath": "assets/images/note_black.png",
+        "selectedIconPath": "assets/images/note_green.png"
       },
       {
         "pagePath": "pages/home/home",
-        "text": "当前",
-        "iconPath": "assets/images/createtask_black.png",
-        "selectedIconPath": "assets/images/createtask_green.png"
+        "text": "test",
+        "iconPath": "assets/images/test_black.png",
+        "selectedIconPath": "assets/images/test_green.png"
+      },
+      {
+        "pagePath": "pages/targetList/targetList",
+        "text": "target",
+        "iconPath": "assets/images/target_black.png",
+        "selectedIconPath": "assets/images/target_green.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我的",
-        "iconPath": "assets/images/people_black.png",
-        "selectedIconPath": "assets/images/people_green.png"
+        "text": "me",
+        "iconPath": "assets/images/emoji_black.png",
+        "selectedIconPath": "assets/images/emoji_green.png"
       }
     ]
   },

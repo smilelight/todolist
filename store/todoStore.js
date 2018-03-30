@@ -99,7 +99,7 @@ class TodoStore extends Store {
       completedAt: new Date('2017/11/20'),
       time: new Date()
     })])
-    this.todos.forEach((value)=>console.log(value.time))
+    // this.todos.forEach((value)=>console.log(value.time))
     this.save()
     wx.setStorageSync('__todos_inited__', true)
   }

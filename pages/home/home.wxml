@@ -15,7 +15,7 @@
   <button bindtap='navigateToCalendar'>Calendar</button>
 </view>
 -->
-<view wx:if="{{true}}">
+<view wx:if="{{false}}">
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>
   </view>
@@ -51,7 +51,23 @@
   </view>
 </view>
 
-<view wx:if="{{true}}">
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='planList' class='button'>计划列表测试</button>
+  </view>
+
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='addTarget' class='button'>增加目标测试</button>
+  </view>
+
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='addPlan' class='button'>增加计划测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='targetList' class='button'>目标列表测试</button>
+  </view>
+
+<view wx:if="{{false}}">
   <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
 </view>
 

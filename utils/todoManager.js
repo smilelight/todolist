@@ -10,11 +10,12 @@ class TodoManager {
       this.todos = todoStore.getTodos()
     }
   }
-  filterTags = ["date","completed","timeblock"]
-  orderTags = ["time","date","dateAndtime","category","level"]
+
+  filterTags = ["date","completed","timeblock","target","plan"]
+  orderTags = ["time","date","dateAndtime","category","level","weight"]
 
   timeFilter(time,value) {
-    time = time.subString(0,time.indexOf(':'))
+    time = time.substring(0,time.indexOf(':'))
     return (value - 1) == parseInt(time)
   }
 
@@ -35,7 +36,7 @@ class TodoManager {
   }
 
   dateAndtimeOrder(a,b) {
-    return (this._dateOrder(a, b) != 0) ? this._dateOrder(a, b): this._timeOrder(a, b)
+    return (this.dateOrder(a, b) != 0) ? this.dateOrder(a, b): this.timeOrder(a, b)
   }
   todoFilter(tag, value) {
     switch (tag) {
@@ -46,7 +47,13 @@ class TodoManager {
         return this.todos.filter(todo => todo.completed == value)
         break;
       case this.filterTags[2]://通过时间段过滤，目前主要用于日视图的显示工作
-        return this.todos.filter(todo => this._timeFilter(todo.time, value))
+        return this.todos.filter(todo => this.timeFilter(todo.time, value))
+        break;
+      case this.filterTags[3]://通过目标过滤
+        return this.todos.filter(todo => todo.targetId == value)
+        break;
+      case this.filterTags[4]://通过计划过滤
+        return this.todos.filter(todo => todo.planId == value)
         break;
       default:
         return this.todos

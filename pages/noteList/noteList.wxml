@@ -1,0 +1,21 @@
+<!--pages/note/list.wxml-->
+<view class="page">
+  <view
+    wx:for="{{ notes }}"
+    wx:key="{{ item.uuid }}"
+    class="ripple fast fadeInRight"
+    style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+    <note-card
+      note="{{ item }}"
+      data-uuid="{{ item.uuid }}"
+      bindtap="handleNoteTap"
+      bindlongtap="handleNoteLongTap"
+      bindtouchend="handleNoteTouchEnd">
+    </note-card>
+  </view>
+  <view class="ripple bounceIn" wx:if="{{ !notes.length }}">
+    <tips-info text="还没有笔记哦，快去新建一个吧！">
+    </tips-info>
+  </view>
+  <view class="note-add" bindtap="handleAddNote">+</view>
+</view>

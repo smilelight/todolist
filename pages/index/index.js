@@ -13,10 +13,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    setTimeout(() => {
-      // 打开主页面
-      this.openPage()
-    }, 1500)
+    // setTimeout(() => {
+    //   // 打开主页面
+    //   this.openPage()
+    // }, 1500)
+    this.openPage()
   },
 
   /**

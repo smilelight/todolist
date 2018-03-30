@@ -111,8 +111,15 @@ Page({
 
   navigateToPage: function(e){
     var page = e.currentTarget.dataset.page;
+    console.log(page)
+    // wx.navigateTo({
+    //   url: '../'+page+'/'+page,
+    // })
     wx.navigateTo({
-      url: '../'+page+'/'+page,
+      url: '../planList/planList',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
 
@@ -129,9 +136,9 @@ Page({
     let title = ['TodoList（进行中: ', uncompletedCount, ', 今日已完成: ', todayCompletedCount, '）'].join('')
     wx.setTopBarText({ text: title })
     // 动画结束后取消动画队列延迟
-    // setTimeout(() => {
-    //   this.update({ delay: false })
-    // }, 2000)
+    setTimeout(() => {
+      this.update({ delay: false })
+    }, 2000)
   },
 
   /**

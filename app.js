@@ -24,15 +24,23 @@ let targets = targetStore.getTargets()
 let plans = planStore.getPlans()
 
 
-todos = new TodoManager(todos).todos
-notes = new NoteManager(notes).notes
-targets = new TargetManager(targets).targets
-plans = new PlanManager(plans).plans
+let todomanager = new TodoManager(todos)
+let notemanager = new NoteManager(notes)
+let targetmanager = new TargetManager(targets)
+let planmanager = new PlanManager(plans)
 
 console.log(todos)
 console.log(notes)
 console.log(targets)
 console.log(plans)
+
+// console.log(typeof(TodoManager.filterTags[0]))
+
+console.log(todomanager.todoFilter("date","2018/03/30"))//根据日期过滤
+console.log(todomanager.todoFilter("completed",true))//根据是否完成过滤
+console.log(todomanager.todoFilter("timeblock",20))//根据时间段过滤
+console.log(todomanager.todoFilter("target",null))//根据目标过滤
+console.log(todomanager.todoFilter("plan",null))//根据计划过滤
 
 
 
