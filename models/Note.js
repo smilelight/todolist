@@ -10,7 +10,9 @@ class Note extends Model {
     Object.assign(this, {
       title: '',
       content: '',
-      createdAt: util.formatTime(new Date())
+      createdAt: util.formatTime(new Date()),
+      planId: null,
+      targetId: null,
     }, model)
 
     // 日期格式化

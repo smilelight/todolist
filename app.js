@@ -1,5 +1,54 @@
 import storeManager from './store/storeManager'
 import todoStore from './store/todoStore'
+
+
+/**
+ * 这里自己作为数据的测试工作
+ */
+// import todoStore from '../../store/todoStore'
+import noteStore from './store/noteStore'
+import targetStore from './store/targetStore'
+import planStore from './store/planStore'
+
+
+import TodoManager from './utils/todoManager.js'
+import NoteManager from './utils/noteManager.js'
+import TargetManager from '/utils/targetManager.js'
+import PlanManager from '/utils/planManager.js'
+
+
+storeManager.read()
+let todos = todoStore.getTodos()
+let notes = noteStore.getNotes()
+let targets = targetStore.getTargets()
+let plans = planStore.getPlans()
+
+
+todos = new TodoManager(todos).todos
+notes = new NoteManager(notes).notes
+targets = new TargetManager(targets).targets
+plans = new PlanManager(plans).plans
+
+console.log(todos)
+console.log(notes)
+console.log(targets)
+console.log(plans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //app.js
 App({
   onLaunch: function () {
