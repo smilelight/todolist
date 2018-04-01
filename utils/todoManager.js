@@ -82,6 +82,15 @@ class TodoManager {
     }
     return this.todos
   }
+
+  filterByTargetId(uuid) {
+    return this.todos.filter(todo => todo.targetId == uuid)
+  }
+
+  filterByTargetId(uuid) {
+    return this.todos.filter(todo => todo.planId == uuid)
+  }
+  
 }
 
 export default TodoManager

@@ -1,6 +1,10 @@
 // pages/note/create.js
 import Note from '../../models/Note'
 import noteStore from '../../store/noteStore'
+import util from '../../utils/util.js'
+import targetStore from '../../store/targetStore.js'
+import planStore from '../../store/planStore.js'
+import PlanManager from '../../utils/planManager.js'
 
 Page({
   /**
@@ -8,22 +12,64 @@ Page({
    */
   data: {
     edit: false,
-    note: new Note()
+    note: new Note(),
+    targets: [],
+    plans: [],
+    targetIndex: 0,
+    planIndex: 0,
+    targetsTitles: [],
+    plansTitles: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    noteStore.read()
+
+    this.data.targets = targetStore.getTargets()
+    this.data.plans = planStore.getPlans()
+    this.data.targetsTitles = this.data.targets.map(value => value.title)
+    this.data.plansTitles = this.data.plans.map(value => value.title)
+
     // 是否编辑
     if (options.uuid) {
       this.data.edit = true
       let editNote = noteStore.getNote(options.uuid)
       this.data.note = new Note(editNote)
+      wx.setNavigationBarTitle({
+        title: '修改笔记',
+      })
     } else {
       this.data.note = new Note()
     }
+
+    if (this.data.note.targetId == null) {
+      if (this.data.targets.length == 0) {
+        this.data.note.targetId = null
+      } else {
+        this.data.note.targetId = this.data.targets[0].uuid
+      }
+    }
+
+    this.data.plans = (new PlanManager()).filterByTargetId(this.data.note.targetId)
+    this.data.plansTitles = this.data.plans.map(value => value.title)
+    if (this.data.note.planId == null) {
+      if (this.data.plans.length == 0) {
+        this.data.note.planId = null
+      } else {
+        this.data.note.planId = this.data.plans[0].uuid
+      }
+    }
+
+    this.data.targetIndex = util.findIndexById(this.data.targets, this.data.note.targetId)
+    this.data.planIndex = util.findIndexById(this.data.plans, this.data.note.planId)
+
     this.update()
+  },
+
+  onShow: function () {
+
   },
 
   /**
@@ -60,14 +106,29 @@ Page({
    * 保存按钮点击事件
    */
   handleSaveTap(e) {
-    if (this.data.edit) {
-      noteStore.editNote(this.data.note.uuid, this.data.note)
+    if (this.data.note.targetId && this.data.note.planId) {
+      if (this.data.edit) {
+        noteStore.editNote(this.data.note.uuid, this.data.note)
+      } else {
+        noteStore.addNote(this.data.note)
+      }
+      noteStore.save()
+      wx.navigateBack()
+      wx.showToast({ title: '保存成功' })
     } else {
-      noteStore.addNote(this.data.note)
+      wx.showModal({
+        title: '无法添加笔记',
+        content: '笔记的目标和计划不能为空！提示：若目标和计划列表为空，请先添加！',
+        showCancel: true,
+        cancelText: 'ojbk',
+        cancelColor: '',
+        confirmText: '好的',
+        confirmColor: '',
+        success: function(res) {},
+        fail: function(res) {},
+        complete: function(res) {},
+      })
     }
-    noteStore.save()
-    wx.navigateBack()
-    wx.showToast({ title: '保存成功' })
   },
 
   /**
@@ -76,5 +137,25 @@ Page({
   update(data) {
     data = data || this.data
     this.setData(data)
-  }
+  },
+
+  handleTargetChange(e) {
+    this.data.note.targetId = this.data.targets[parseInt(e.detail.value)].uuid
+    this.data.targetIndex = parseInt(e.detail.value)
+    this.data.plans = (new PlanManager()).filterByTargetId(this.data.note.targetId)
+    this.data.plansTitles = this.data.plans.map(value => value.title)
+    if (this.data.plans.length == 0){
+      this.data.note.planId = null
+    } else {
+      this.data.note.planId = this.data.plans[0].uuid
+    }
+    this.data.planIndex = util.findIndexById(this.data.plans, this.data.note.planId)
+    this.update()
+  },
+
+  handlePlanChange(e) {
+    this.data.note.targetId = this.data.plans[parseInt(e.detail.value)].uuid
+    this.data.planIndex = parseInt(e.detail.value)
+    this.update()
+  },
 })

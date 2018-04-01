@@ -11,6 +11,9 @@ class PlanManager {
     }
   }
 
+  filterByTargetId(uuid) {
+    return this.plans.filter(plan => plan.targetId == uuid)
+  }
 }
 
 export default PlanManager

@@ -1,0 +1,2 @@
+<!--pages/touchTest/touchTest.wxml-->
+<view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='page'></view>

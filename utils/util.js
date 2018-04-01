@@ -33,8 +33,45 @@ const uuid = () => {
   })
 }
 
+const findIndexById = (array,uuid) => {
+  if (uuid){
+    for ( let i in array) {
+      if (array[i].uuid == uuid) {
+        return i;
+      }
+    }
+  }
+  return -1
+}
+
+const getDate = (date) => {
+  return date.getFullYear() + '-' + formatNumber(date.getMonth() + 1) + '-' + formatNumber(date.getDate())
+}
+
+const getTime = (date) => {
+  return formatNumber(date.getHours()) + ':' + formatNumber(date.getMinutes())
+}
+
+const setDate = (str,date) => {
+  let [year, month, day] = str.split('-')
+  date.setFullYear(parseInt(year))
+  date.setMonth(parseInt(month) - 1)//因为月份是从0开始的
+  date.setDate(parseInt(day))
+}
+
+const setTime = (str,date) => {
+  let [hour, minute] = str.split(':')
+  date.setHours(parseInt(hour))
+  date.setMinutes(parseInt(minute))
+}
+
 module.exports = {
   formatTime: formatTime,
   uuid: uuid,
-  formatMyTime: formatMyTime
+  formatMyTime: formatMyTime,
+  findIndexById : findIndexById,
+  getDate : getDate,
+  getTime : getTime,
+  setDate : setDate,
+  setTime : setTime
 }

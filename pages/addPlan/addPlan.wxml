@@ -1,2 +1,84 @@
-<!--pages/addPlan/addPlan.wxml-->
-<text>pages/addPlan/addPlan.wxml</text>
+<!--pages/addTarget/addTarget.wxml-->
+<view class="page">
+  <view class="field-set" style="background: white;">
+    <view class="field-item">
+      <label class="field-label">标题</label>
+      <label class="field-control">
+        <input class="field-input w-full" value="{{ plan.title }}" placeholder="计划名称..." bindinput="handleTitleChange" auto-focus>
+        </input>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">开始时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleBeginDateChange">
+          {{beginDate ? beginDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleBeginTimeChange">
+          {{beginTime ? beginTime:"时间"}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">截止时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleEndDateChange">
+          {{endDate ? endDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleEndTimeChange">
+          {{endTime ? endTime:"时间"}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">重要程度</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ weights}}" value="{{plan.weight - 1}}" bindchange="handleWeightChange">
+          {{plan.weight}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">目标</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{targetsTitles}}" value="{{ targetIndex }}" bindchange="handleTargetChange">
+          {{targetsTitles[targetIndex]}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">是否重复</label>
+      <label class="field-control">
+        <radio-group class="radio-group" bindchange="handleRepeatChange">
+          <label class="radio" wx:for="{{radioitems}}" wx:key="{{index}}">
+            <radio value="{{item.value}}" checked="item.value == plan.isRepeat" />{{item.title}}
+          </label>
+        </radio-group>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">描述</label>
+      <label class="field-control">
+        <textarea class="field-input w-full textarea" value="{{ plan.desc }}" placeholder="计划描述..." bindinput="handleContentChange">
+        </textarea>
+      </label>
+    </view>
+
+
+    <view class="fixed-button">
+      <view class="button-group">
+        <button class="button button-primary" bindtap="handleSaveTap">完成啦</button>
+      </view>
+    </view>
+  </view>
+  <view class="fixed-bottom">
+    <view class="button-group">
+      <button class="button" bindtap="handleCancelTap">取消</button>
+      <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+    </view>
+  </view>
+</view>

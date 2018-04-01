@@ -14,6 +14,6 @@
 
 @import "./assets/wxss/me.wxss";
 @import "./assets/wxss/sidebar.wxss";
-@import "./assets/wxss/sidebar.wxss";
+
 
 

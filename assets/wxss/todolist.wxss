@@ -17,6 +17,7 @@ button::after {
 }
 
 .field-item {
+  width: 100%;
   display: flex;
   border-bottom: 1px dashed #eee;
   padding: 30rpx;
@@ -32,8 +33,10 @@ button::after {
   display: block;
   color: #999;
   white-space: nowrap;
-  min-width: 100rpx;
-  text-align: right;
+  /* min-width: 100rpx; */
+  /* max-width: 150rpx; */
+  width: 150rpx;
+  text-align: center;
 }
 
 .field-control {
@@ -44,7 +47,14 @@ button::after {
 
 .field-input {
   font-size: 32rpx;
-  padding: 6rpx 0;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 150rpx;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .fixed-bottom {

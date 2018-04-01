@@ -13,11 +13,27 @@
         </input>
       </label>
     </view>
+     <view class="field-item">
+      <label class="field-label">目标</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ targetsTitles }}" value="{{targetIndex}}" bindchange="handleTargetChange">
+          {{ targetsTitles[targetIndex] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">计划</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ plansTitles }}" value="{{ planIndex}}" bindchange="handlePlanChange">
+          {{ plansTitles[planIndex] }}
+        </picker>
+      </label>
+    </view>
     <view class="field-item">
       <label class="field-label">内容</label>
       <label class="field-control">
         <textarea
-          class="field-input w-full"
+          class="field-input w-full textarea"
           value="{{ note.content }}"
           placeholder="笔记内容..."
           bindinput="handleContentChange">

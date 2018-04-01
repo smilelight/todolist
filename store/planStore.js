@@ -59,6 +59,7 @@ class PlanStore extends Store {
    * 获取计划列表
    */
   getPlans() {
+    this.read()
     return this.plans
   }
 
@@ -66,6 +67,7 @@ class PlanStore extends Store {
    * 根据UUID获取计划
    */
   getPlan(uuid) {
+    this.read()
     return this.plans.find((item) => item.uuid === uuid)
   }
 
@@ -129,6 +131,8 @@ class PlanStore extends Store {
   read() {
     let plans = wx.getStorageSync(this.key) || []
     this.plans = plans
+    this.plans.forEach(plan => plan.beginTime = new Date(plan.beginTime))
+    this.plans.forEach(plan => plan.endTime = new Date(plan.endTime))
   }
 
   /**

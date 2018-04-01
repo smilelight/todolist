@@ -1,15 +1,11 @@
-// pages/planList/planList.js
-import planStore from '../../store/planStore.js'
-
-const app = getApp()
-
+// pages/touchTest/touchTest.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    plans: planStore.getPlans(),
+  
   },
 
   /**
@@ -30,8 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.plans = planStore.getPlans()
-    this.update()
+  
   },
 
   /**
@@ -69,16 +64,16 @@ Page({
   
   },
 
-  update(data) {
-    data = data || this.data
-    this.setData(data)
+  handleTouchStart: function (e) {
+    console.log(wx.getSystemInfoSync())
+    console.log(e)
   },
 
-  handleItemTap: function (e) {
-    let uuid = e.currentTarget.dataset.uuid
-    console.log(uuid)
-    wx.navigateTo({
-      url: '../addPlan/addPlan?uuid=' + uuid
-    })
+  handleTouchMove: function (e) {
+    console.log(e);
+  },
+
+  handleTouchEnd: function (e) {
+    console.log(e);
   }
 })

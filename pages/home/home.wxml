@@ -67,6 +67,14 @@
     <button bindtap='navigateToPage' data-page='targetList' class='button'>目标列表测试</button>
   </view>
 
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='touchTest' class='button'>touch测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='animationTest' class='button'>animation测试</button>
+  </view>
+
 <view wx:if="{{false}}">
   <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
 </view>

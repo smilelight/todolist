@@ -23,12 +23,13 @@
     "pages/timerShaft/timerShaft",
     "pages/fqTodoItemTest/fqTodoItemTest",
     "pages/about/about",
-    "pages/notelist/noteList",
     "pages/addNote/addNote",
     "pages/targetList/targetList",
     "pages/noteList/noteList",
     "pages/addPlan/addPlan",
-    "pages/addTarget/addTarget"
+    "pages/addTarget/addTarget",
+    "pages/touchTest/touchTest",
+    "pages/animationTest/animationTest"
   ],
   "window": {
     "backgroundTextStyle": "light",

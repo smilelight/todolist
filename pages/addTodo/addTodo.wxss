@@ -8,3 +8,31 @@ button {
   padding: 10rpx;
   margin: 20rpx;
 }
+
+.todo-item__date {
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.todo-item__time {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.time-picker {
+  padding: 0rpx;
+}
+
+.textarea {
+  /* width: 100rpx; */
+  /* right: 50rpx; */
+/* position: static; */
+/* margin-right: 30rpx;
+ */
+ width: 90% !important;
+}

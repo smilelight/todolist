@@ -1,0 +1,23 @@
+/* pages/touchTest/touchTest.wxss */
+/* .page {
+  position: absolute;
+  left: 180rpx;
+  top: 200rpx;
+  width: 350rpx;
+  height: 350rpx;
+  background-color: #c9fcf4;
+  border: 20rpx solid #7af9e6;
+  border-radius: 20rpx;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+} */
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c9fcf4;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}

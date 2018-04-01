@@ -1,2 +1,6 @@
 <!--pages/targetList/targetList.wxml-->
-<text>pages/targetList/targetList.wxml</text>
+<view class='page'>
+<view class='target-item' wx:for="{{targets}}" wx:key="{{index}}" wx:for-item="target" bindtap='handleItemTap' data-uuid="{{target.uuid}}">
+{{target.title}}
+</view>
+</view>

@@ -40,6 +40,7 @@ class NoteStore extends Store {
    * 获取笔记列表
    */
   getNotes() {
+    this.read()
     return this.notes
   }
 
@@ -47,6 +48,7 @@ class NoteStore extends Store {
    * 根据UUID获取笔记
    */
   getNote(uuid) {
+    this.read()
     return this.notes.find((item) => item.uuid === uuid)
   }
 

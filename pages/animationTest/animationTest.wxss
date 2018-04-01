@@ -1,0 +1,51 @@
+/* pages/animationTest/animationTest.wxss */
+page {
+  overflow: hidden;
+}
+
+ .aaa {
+  position: absolute;
+  left: 180rpx;
+  top: 200rpx;
+  width: 350rpx;
+  height: 350rpx;
+  background-color: #c9fcf4;
+  border: 20rpx solid #7af9e6;
+  border-radius: 20rpx;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+} 
+
+.button-left {
+  position: absolute;
+  bottom: 200rpx;
+  left: 100rpx;
+  width: 150rpx;
+  height: 100rpx;
+  border: 20rpx solid #7af9e6;
+  background-color: #c9fcf4;
+  border-radius: 20rpx;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.button-right {
+  position: absolute;
+  bottom: 200rpx;
+  right: 100rpx;
+  width: 150rpx;
+  height: 100rpx;
+  border: 20rpx solid #7af9e6;
+  background-color: #c9fcf4;
+  border-radius: 20rpx;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+image {
+  width: 300rpx;
+  height: 300rpx;
+}

@@ -14,3 +14,16 @@ button {
 .field-content {
   border: 1px solid red;
 }
+
+.time-picker {
+  padding: 0rpx;
+}
+
+.textarea {
+  /* width: 100rpx; */
+  /* right: 50rpx; */
+/* position: static; */
+/* margin-right: 30rpx;
+ */
+ width: 90% !important;
+}

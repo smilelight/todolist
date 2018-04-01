@@ -112,14 +112,8 @@ Page({
   navigateToPage: function(e){
     var page = e.currentTarget.dataset.page;
     console.log(page)
-    // wx.navigateTo({
-    //   url: '../'+page+'/'+page,
-    // })
     wx.navigateTo({
-      url: '../planList/planList',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      url: '../'+page+'/'+page,
     })
   },
 

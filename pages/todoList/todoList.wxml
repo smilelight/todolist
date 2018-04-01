@@ -28,7 +28,7 @@
       进行中
     </view>
     <view wx:for="{{ todos }}" wx:key="{{ index }}" wx:if="{{ !item.completed }}" class="todo-list__item ripple fast fadeInRight" style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
-      <todo-item class="todo-item" todo="{{ item }}" data-index="{{ index }}" disAbled=false bindchange="handleTodoItemChange bindlongpress="handleTodoLongTap" bindtap="handleTap">
+      <todo-item class="todo-item" todo="{{ item }}" data-uuid="{{ item.uuid }}" disAbled=false bindchange="handleTodoItemChange bindlongpress="handleTodoLongTap" bindtap="handleTap">
       </todo-item>
     </view>
     <view class="ripple bounceIn" wx:if="{{!uncompletedCount}}">

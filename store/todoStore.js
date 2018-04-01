@@ -108,6 +108,7 @@ class TodoStore extends Store {
    * 获取 todos
    */
   getTodos() {
+    this.read()
     return this.todos
   }
 
@@ -115,6 +116,7 @@ class TodoStore extends Store {
    * 获取 Todo
    */
   getTodo(uuid) {
+    this.read()
     return this.todos.find((item) => item.uuid === uuid)
   }
 
@@ -213,6 +215,8 @@ class TodoStore extends Store {
   read() {
     let todos = wx.getStorageSync(this.key) || []
     this.todos = todos
+    this.todos.forEach(todo => todo.beginTime = new Date(todo.beginTime))
+    this.todos.forEach(todo => todo.endTime = new Date(todo.endTime))
   }
 
   /**
@@ -224,6 +228,11 @@ class TodoStore extends Store {
 
   updateTodo(todo) {
     Object.assign(this.todos.find((item) => item.uuid === todo.uuid),todo);
+  }
+
+  editTodo(uuid, newTodo) {
+    let todo = this.getTodo(uuid)
+    if (todo) Object.assign(todo, newTodo)
   }
 
 }

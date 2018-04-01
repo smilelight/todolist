@@ -155,11 +155,10 @@ Page({
   },
 
   handleTap(e) {
-    let index = e.currentTarget.dataset.index;
-    let todo = this.data.todos[index];
-    let todo_str = JSON.stringify(todo);
+    let uuid = e.currentTarget.dataset.uuid;
+    console.log(todoStore.getTodo(uuid))
     wx.navigateTo({
-      url: '../addTodo/addTodo?todo=' + todo_str,
+      url: '../addTodo/addTodo?uuid=' + uuid,
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },

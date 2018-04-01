@@ -24,23 +24,57 @@
     <view class="field-item">
       <label class="field-label">目标</label>
       <label class="field-control">
-        <picker class="w-full" range="{{ targets }}" value="{{ todo.category - 1 }}" bindchange="handleTargetChange">
-          {{ categories[todo.category - 1] }}
+        <picker class="w-full" range="{{ targetsTitles }}" value="{{ targetIndex }}" bindchange="handleTargetChange">
+          {{ targetsTitles[targetIndex] }}
         </picker>
       </label>
     </view>
     <view class="field-item">
       <label class="field-label">计划</label>
       <label class="field-control">
-        <picker class="w-full" range="{{ plans }}" value="{{ todo.category - 1 }}" bindchange="handlePlanChange">
-          {{ categories[todo.category - 1] }}
+        <picker class="w-full" range="{{ plansTitles }}" value="{{ planIndex }}" bindchange="handlePlanChange">
+          {{ plansTitles[planIndex] }}
+        </picker>
+      </label>
+    </view>
+     <view class="field-item">
+      <label class="field-label">重要程度</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ weights}}" value="{{todo.weight - 1}}" bindchange="handleCategoryChange">
+          {{ todo.weight }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">开始时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleBeginDateChange">
+          {{beginDate ? beginDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleBeginTimeChange">
+          {{beginTime ? beginTime:"时间"}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">截止时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleEndDateChange">
+          {{endDate ? endDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleEndTimeChange">
+          {{endTime ? endTime:"时间"}}
         </picker>
       </label>
     </view>
     <view class="field-item">
       <label class="field-label">描述</label>
       <label class="field-control">
-        <textarea class="field-input w-full" placeholder="任务描述..." bindinput="handleDescChange">
+        <textarea class="field-input w-full textarea" placeholder="任务描述..." bindinput="handleDescChange">
         </textarea>
       </label>
     </view>

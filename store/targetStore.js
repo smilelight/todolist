@@ -45,6 +45,7 @@ class TargetStore extends Store {
    * 获取目标列表
    */
   getTargets() {
+    this.read()
     return this.targets
   }
 
@@ -52,6 +53,7 @@ class TargetStore extends Store {
    * 根据UUID获取目标
    */
   getTarget(uuid) {
+    this.read()
     return this.targets.find((item) => item.uuid === uuid)
   }
 
@@ -115,6 +117,8 @@ class TargetStore extends Store {
   read() {
     let targets = wx.getStorageSync(this.key) || []
     this.targets = targets
+    this.targets.forEach(target => target.beginTime = new Date(target.beginTime))
+    this.targets.forEach(target => target.endTime = new Date(target.endTime))
   }
 
   /**
