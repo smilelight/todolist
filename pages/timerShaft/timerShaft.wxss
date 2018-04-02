@@ -1,1 +1,105 @@
 /* pages/timerShaft/timerShaft.wxss */
+
+.dot {
+  flex: 0 0 auto;
+  color: #09BB07;
+  width: 50rpx;
+  height: 50rpx;
+  border: 10rpx solid #09BB07;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 45rpx;
+  margin: 10rpx;
+  /* vertical-align: middle; */
+}
+
+.shaft-item {
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shaft-item-time {
+  font-size: 25rpx;
+  flex: 1;
+  margin: 0 25rpx;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+
+.shaft-item-content {
+  flex: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 20rpx;
+}
+
+.shaft-item-title {
+  font-size: 30rpx;
+  padding: 10rpx;
+  margin: 5rpx;
+  flex: 0;
+  border-radius: 20rpx;
+}
+
+.shaft-item-desc {
+  font-size: 25rpx;
+  margin: 5rpx;
+  flex: 1;
+  padding: 10rpx;
+  border-radius: 20rpx;
+}
+
+.bg-color-1 {
+  background-color: #FFFFCC;
+}
+
+.bg-color-2 {
+  background-color: #CCFFCC;
+}
+
+.bg-color-3 {
+  background-color: #CCCCFF;
+}
+
+.bg-color-4 {
+  background-color: #FFCCCC;
+}
+
+.bg-color-5 {
+  background-color: #CCFFFF;
+}
+
+.bg-color-6 {
+  background-color: #FFCCFF;
+}
+
+.col-line {
+  width: 10rpx;
+  height: 150%;
+  background: #09BB07;
+  z-index: -1;
+  position: absolute;
+  left: 240rpx;
+  top: -25%;
+}
+
+image {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  left: 200rpx;
+}
+
+.al-item {
+  position: relative;
+  margin: 0;
+}

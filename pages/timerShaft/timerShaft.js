@@ -1,10 +1,14 @@
 // pages/timerShaft/timerShaft.js
+
+import todoStore from '../../store/todoStore.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    completedTodos:[],
   
   },
 
@@ -25,8 +29,11 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function () { 
+    this.setData({
+      completedTodos: todoStore.getTodos()
+    })
+    console.log(this.data.completedTodos)
   },
 
   /**

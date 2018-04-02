@@ -1,2 +1,16 @@
 <!--pages/timerShaft/timerShaft.wxml-->
-<text>pages/timerShaft/timerShaft.wxml</text>
+<image src='../../assets/images/time.png'></image>
+<view wx:for="{{completedTodos}}" wx:key="index" wx:for-item="todo" style='width:100%;height:100%'>
+<view class='al-item'>
+   <view class='col-line'></view> 
+  <view class='shaft-item'>
+     <view class='col-line'></view> 
+    <view class='shaft-item-time bg-color-1'>{{todo.completedAt}}</view>
+    <view class='dot'>●</view>
+    <view class='shaft-item-content bg-color-4'>
+      <view class='shaft-item-title bg-color-2'>{{todo.title}}</view>
+      <view class='shaft-item-desc bg-color-3'>{{todo.desc}}</view>
+    </view>
+  </view>
+</view>
+</view>
