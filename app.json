@@ -29,7 +29,9 @@
     "pages/addPlan/addPlan",
     "pages/addTarget/addTarget",
     "pages/touchTest/touchTest",
-    "pages/animationTest/animationTest"
+    "pages/animationTest/animationTest",
+    "pages/testAnimation/testAnimation",
+    "pages/todoCard/todoCard"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,4 @@
+<!--pages/testAnimation/testAnimation.wxml-->
+<image src='../../assets/images/study.png' animation="{{animationData}}"></image>
+<image src='../../assets/images/study.png' class='img'></image>
+<view bindtap='handleTap'>测试</view>

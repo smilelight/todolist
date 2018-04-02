@@ -1,0 +1,12 @@
+<!--pages/todoCard/todoCard.wxml-->
+<view wx:for="{{todos}}" class='page' wx:for-item="todo" wx:key="index">
+  <view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa' animation="{{animation}}" style='left:{{50 + index * 750}}rpx'>
+    <!-- {{item}}
+    <image src='../../assets/images/study.png'></image> -->
+<view>{{todo.title}}</view>
+<view>{{todoTargetTitles[index]}}</view>
+<view>{{todoPlanTitles[index]}}</view>
+<view>{{todoBeginTimes[index]}}</view>
+<view>{{todoEndTimes[index]}}</view>
+  </view>
+</view>

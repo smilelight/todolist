@@ -1,10 +1,10 @@
 <!--pages/animationTest/animationTest.wxml-->
-<view wx:for="{{items}}">
-<view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa' animation="{{animation}}" style='left:{{180 + index * 750}}rpx'>
-{{item}}
-<image src='../../assets/images/study.png'></image>
-</view>
+<view wx:for="{{items}}" class='page'>
+  <view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa' animation="{{animation}}" style='left:{{50 + index * 750}}rpx'>
+    {{item}}
+    <image src='../../assets/images/study.png'></image>
+  </view>
 </view>
 
-<view class='button-left' bindtap='handleLButTap'>左滑</view>
-<view class='button-right' bindtap='handleRButTap'>右滑</view>
+<view class='button-left' bindtap='handleLButTap' wx:if="{{false}}">左滑</view>
+<view class='button-right' bindtap='handleRButTap' wx:if="{{false}}">右滑</view>

@@ -74,15 +74,14 @@ Page({
   handleLButTap: function (e) {
     let animation = wx.createAnimation(
       {
-        duration: 10000,
-        timingFunction: '"ease"',
-        delay: 0,
-        transformOrigin: '"50% 50% 0"',
+        duration: 400,
+        timingFunction: 'ease'
       })
     // animation.rotate(90 * i).step()
     // i++
     if (offset > 1 - this.data.items.length) offset--
-    animation.translateX( wx.getSystemInfoSync().screenWidth*offset).rotate(90*offset).step()
+    // animation.translateX( wx.getSystemInfoSync().screenWidth*offset).rotate(90*offset).step()
+    animation.translateX( wx.getSystemInfoSync().screenWidth*offset).step()
     this.setData({
       animation: animation.export()
     })
@@ -91,15 +90,14 @@ Page({
    handleRButTap: function (e) {
     let animation = wx.createAnimation(
       {
-        duration: 10000,
-        timingFunction: '"ease"',
-        delay: 0,
-        transformOrigin: '"50% 50% 0"',
+        duration: 400,
+        timingFunction: 'ease',
       })
     // animation.rotate(90 * i).step()
     // i++
     if(offset < 0 ) offset++
-    animation.translateX(wx.getSystemInfoSync().screenWidth * offset).rotate(90 * offset).step()
+    // animation.translateX(wx.getSystemInfoSync().screenWidth * offset).rotate(90 * offset).step()
+    animation.translateX(wx.getSystemInfoSync().screenWidth * offset).step()
     this.setData({
       animation: animation.export()
     })
