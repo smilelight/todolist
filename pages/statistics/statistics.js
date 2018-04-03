@@ -26,12 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.redirectTo({
-      url: '../testChart/testChart',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
   
   },
 

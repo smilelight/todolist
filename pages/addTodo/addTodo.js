@@ -50,13 +50,11 @@ Page({
     if (options.uuid){
       this.data.edit = true
       let edittodo =  todoStore.getTodo(options.uuid)
-      console.log("type:",typeof(edittodo.beginTime))
-      // console.log(edittodo)
-      // console.log(edittodo.category)
+      console.log(edittodo)
+      console.log(edittodo.category)
       this.data.todo = new Todo(edittodo)
-      console.log("type:",typeof(this.data.todo.beginTime))
-      // console.log(this.data.todo.category)
-      // console.log(this.data.todo)
+      console.log(this.data.todo.category)
+      console.log(this.data.todo)
       this.data.beginDate = util.getDate(this.data.todo.beginTime)
       this.data.endDate = util.getDate(this.data.todo.endTime)
       this.data.beginTime = util.getTime(this.data.todo.beginTime)
@@ -182,7 +180,6 @@ Page({
   },
 
   handleBeginDateChange(e) {
-    console.log("type: before the function:",typeof(this.data.todo.beginTime))
     util.setDate(e.detail.value,this.data.todo.beginTime)
     this.setData({
       todo: this.data.todo,

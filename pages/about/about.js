@@ -8,14 +8,15 @@ Page({
     about: `本微信小程序的设计来源：
     想法：
     生命格子（人生格子）、
-    自己对计划类APP的理解
+    自己对计划类APP的理解、
+    target对应为plan、plan分解为todo
     应用：
     高效Todo（四象限和时间轴）、
     滴答清单（日视图、月视图、年视图、周视图等等）
     demo：
-    微信小程序官方demo（我的页面借鉴）、
+    微信小程序官方demo（"我的"页面借鉴）、
     任务清单demo（主体采用，GitHub：charleslo1/wxapp-todo）、
-    侧滑特效demo（GitHub：didiaohu/xiaoxiaoxiao/sideslip）、
+    侧滑特效demo（GitHub：didiaohu/xiaoxiaoxiao/sideslip）(已弃用)、
     日历demo（GitHub：youzouzou/wxapp）、
     图表demo（GitHub：xiaolin3303/wx-charts）`
   },
