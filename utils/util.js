@@ -53,6 +53,11 @@ const getTime = (date) => {
 }
 
 const setDate = (str,date) => {
+  if(typeof(date)!=typeof(Date)){
+    date = new Date(date)
+  }
+  console.log(typeof(str),str)
+  console.log(typeof(date),date)
   let [year, month, day] = str.split('-')
   date.setFullYear(parseInt(year))
   date.setMonth(parseInt(month) - 1)//因为月份是从0开始的
@@ -60,6 +65,9 @@ const setDate = (str,date) => {
 }
 
 const setTime = (str,date) => {
+  if (typeof (date) != typeof (Date)) {
+    date = new Date(date)
+  }
   let [hour, minute] = str.split(':')
   date.setHours(parseInt(hour))
   date.setMinutes(parseInt(minute))

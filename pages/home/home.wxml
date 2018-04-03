@@ -87,6 +87,10 @@
     <button bindtap='navigateToPage' data-page='timerShaft' class='button'>时间轴测试</button>
   </view>
 
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='testChart' class='button'>图表测试</button>
+  </view>
+
 <view wx:if="{{false}}">
   <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
 </view>

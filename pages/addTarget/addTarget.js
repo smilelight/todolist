@@ -33,7 +33,7 @@ Page({
       this.data.beginTime = util.getTime(this.data.target.beginTime)
       this.data.endTime = util.getTime(this.data.target.endTime)
       wx.setNavigationBarTitle({
-        title: '修改任务',
+        title: '修改目标',
       })
     } else {
       this.data.target = new Target()

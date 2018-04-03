@@ -1,2 +1,32 @@
 <!--pages/testChart/index.wxml-->
-<text>pages/testChart/index.wxml</text>
+<view class="page">
+  <view class="user-card">
+    <image class="user-card__bg" src="../../assets/img/me-bg.png" mode="aspectFill"></image>
+    <view class="user-card__info">
+      <image class="user-card__head" src="{{ userInfo.avatarUrl }}"></image>
+      <text class="user-card__name">{{ userInfo.nickName }}</text>
+    </view>
+    <view class="user-card__links">
+      <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">进行中</label>
+        <text class="user-card__linkValue">{{ todosUncompletedCount }}</text>
+      </view>
+      <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">已完成</label>
+        <text class="user-card__linkValue">{{ todosCompletedCount }}</text>
+      </view>
+      <view class="user-card__linkItem" bindtap="linkToNotes">
+        <label class="user-card__linkLabel">笔记</label>
+        <text class="user-card__linkValue">{{ notesCount }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="charts-card">
+    <text class="charts-card__header">任务完成率</text>
+    <canvas class="charts-card__body" canvas-id="chartsA"></canvas>
+  </view>
+  <view class="charts-card">
+    <view class="charts-card__header">每天完成量</view>
+    <canvas class="charts-card__body" canvas-id="chartsB" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+  </view>
+</view>
