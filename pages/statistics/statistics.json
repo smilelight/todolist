@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "统计",
+  "usingComponents": {
+    "tips-info": "/components/tips-info/tips-info"
+  }
+}

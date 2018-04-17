@@ -4,16 +4,11 @@
     <view class="field-item">
       <label class="field-label">标题</label>
       <label class="field-control">
-        <input
-          class="field-input w-full"
-          value="{{ note.title }}"
-          placeholder="笔记标题..."
-          bindinput="handleTitleChange"
-          auto-focus>
+        <input class="field-input w-full" value="{{ note.title }}" placeholder="笔记标题..." bindinput="handleTitleChange" auto-focus>
         </input>
       </label>
     </view>
-     <view class="field-item">
+    <view class="field-item">
       <label class="field-label">目标</label>
       <label class="field-control">
         <picker class="w-full" range="{{ targetsTitles }}" value="{{targetIndex}}" bindchange="handleTargetChange">
@@ -32,19 +27,20 @@
     <view class="field-item">
       <label class="field-label">内容</label>
       <label class="field-control">
-        <textarea
-          class="field-input w-full textarea"
-          value="{{ note.content }}"
-          placeholder="笔记内容..."
-          bindinput="handleContentChange">
+        <textarea class="field-input w-full textarea" value="{{ note.content }}" placeholder="笔记内容..." bindinput="handleContentChange">
         </textarea>
       </label>
     </view>
-  </view>
-  <view class="fixed-bottom">
-    <view class="button-group">
-      <button class="button" bindtap="handleCancelTap">取消</button>
-      <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+    <view class="field-item bottom-button">
+      <view class="button-group" style='width:100%'>
+        <button class="button" bindtap="handleCancelTap">取消</button>
+        <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+      </view>
+    </view>
+    <view class='field-item bottom-button'>
+      <view class="button-group" style="width:100%">
+        <button class="button button-delete" bindtap="handleDeleteTap">删除</button>
+      </view>
     </view>
   </view>
 </view>

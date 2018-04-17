@@ -90,7 +90,7 @@ class TargetStore extends Store {
    */
   editTarget(uuid, newTarget) {
     let target = this.getTarget(uuid)
-    if (target) Object.assign(Target, newTarget)
+    if (target) Object.assign(target, newTarget)
   }
 
   /**
@@ -98,7 +98,7 @@ class TargetStore extends Store {
    */
   removeTarget(uuid) {
     let target = this.getTarget(uuid)
-    let index = this.getIndex(Target)
+    let index = this.getIndex(target)
     if (index < 0) return false
     return this.removeTargetByIndex(index)
   }

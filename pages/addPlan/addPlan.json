@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "新建计划"
+  "navigationBarTitleText": "新建计划",
+  "usingComponents": {
+    "sub-items": "/components/sub-items/sub-items"
+  }
 }

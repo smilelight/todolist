@@ -61,24 +61,47 @@
       </label>
     </view>
     <view class="field-item">
+      <label class="field-label">下属todo</label>
+      <label class="field-control">
+        <sub-items customData="{{todoTitles}}"></sub-items>
+      </label>
+    </view>
+    <view class="field-item">
       <label class="field-label">描述</label>
       <label class="field-control">
         <textarea class="field-input w-full textarea" value="{{ plan.desc }}" placeholder="计划描述..." bindinput="handleContentChange">
         </textarea>
       </label>
     </view>
+    <view class="field-item">
+      <label class="field-label">完成度</label>
+      <label class="field-control">
+        <canvas canvas-id='ringChart' class='chart'></canvas>
+      </label>
+    </view>
+      <view class="field-item">
+      <label class="field-label">日完成量</label>
+      <label class="field-control">
+        <canvas canvas-id='lineChart' class='chart'></canvas>
+      </label>
+    </view>
 
 
-    <view class="fixed-button">
-      <view class="button-group">
-        <button class="button button-primary" bindtap="handleSaveTap">完成啦</button>
+    <view class="field-item bottom-button">
+      <view class="button-group" style="width:100%">
+        <button class="button {{plan.completed ? 'button-completed': 'button-primary'}}" bindtap="handleCompletedTap" disabled='{{plan.completed}}'>完成啦</button>
       </view>
     </view>
-  </view>
-  <view class="fixed-bottom">
-    <view class="button-group">
-      <button class="button" bindtap="handleCancelTap">取消</button>
-      <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+    <view class="field-item bottom-button">
+      <view class="button-group" style="width:100%">
+        <button class="button" bindtap="handleCancelTap">取消</button>
+        <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+      </view>
+    </view>
+    <view class='field-item bottom-button'>
+      <view class="button-group" style="width:100%">
+        <button class="button button-delete" bindtap="handleDeleteTap">删除</button>
+      </view>
     </view>
   </view>
 </view>

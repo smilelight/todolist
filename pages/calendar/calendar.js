@@ -27,7 +27,7 @@ Page({
     // 是否动画延迟
     delay: false,
 
-    orders: ["时间", "类别", "优先级"]
+    orders: ["时间", "类别", "优先级", "默认"]
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -247,6 +247,11 @@ Page({
       case 2:
         this.setData({
           todos: todoManager.todoOrder(todoManager.orderTags[4], e.detail.direction)//按优先级排序
+        })
+        break
+      case 3:
+        this.setData({
+          todos: todoManager.todoOrder(todoManager.orderTags[5], e.detail.direction)//按优先级排序
         })
         break
     }

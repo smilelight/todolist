@@ -1,7 +1,18 @@
 import Todo from '../models/Todo'
 import todoStore from '../store/todoStore'
+import targetStore from '../store/targetStore.js'
+import planStore from '../store/planStore.js'
 
 class TodoManager {
+
+  static DEFAULT_TARGET_WEIGHT = 3;
+  static DEFAULT_PLAN_WEIGHT = 2;
+  //coefficient 系数的意思，因为权重已经使用了weight了。
+  //下面CNT即coefficient的缩写
+  static DEFAULT_TARGET_CNT = 10;
+  static DEFAULT_PLAN_CNT = 5;
+  static DEFAULT_TODO_CNT = 1;
+
   constructor(todos){
     this.todos = null
     if(todos){
@@ -76,6 +87,10 @@ class TodoManager {
       case this.orderTags[4]://通过优先级排序
         this.todos.sort((a, b) => a.level - b.level)
         break;
+      case this.orderTags[5]://通过权重排序
+        planStore.getPlans().forEach((item)=>{console.log(item.weight)})
+        this.todos.sort(this.orderByWeight)
+        break;
     }
     if (value) {
       this.todos.reverse()
@@ -83,12 +98,72 @@ class TodoManager {
     return this.todos
   }
 
+//还未经过测试
+  orderByWeight(a,b) {
+    let targetWeightA = TodoManager.DEFAULT_TARGET_WEIGHT
+    console.log("targetWeightA:",targetWeightA)
+    let planWeightA = TodoManager.DEFAULT_PLAN_WEIGHT;
+    console.log("planWeightA:",planWeightA)
+    let targetWeightB = TodoManager.DEFAULT_TARGET_WEIGHT
+    let planWeightB = TodoManager.DEFAULT_PLAN_WEIGHT
+    let resultA
+    let resultB;
+
+    //以下代码当然也可以写成这种简短形式。
+    //targetWeightA = a.targetId ? targetStore.getTarget(a.targetId).weight : TodoManager.DEFAULT_TARGET_WEIGHT;
+
+    if(a.targetId){
+      targetWeightA = targetStore.getTarget(a.targetId).weight;
+    }
+
+    if (a.planId) {
+      planWeightA = planStore.getPlan(a.planId).weight;
+      console.log("shit:",planWeightA)
+    }
+    console.log("defaultPlanWeight:",TodoManager.DEFAULT_PLAN_WEIGHT)
+    console.log("planIdA == null",a.planId == null)
+    console.log("planIdA",a.planId)
+    console.log("planA:",planWeightA);
+
+    if (b.targetId) {
+      targetWeightB = targetStore.getTarget(b.targetId).weight;
+    }
+
+    if (b.planId) {
+      planWeightB = planStore.getPlan(b.planId).weight;
+    }
+    resultA = TodoManager.DEFAULT_TARGET_CNT * targetWeightA + TodoManager.DEFAULT_PLAN_CNT * planWeightA + 
+      TodoManager.DEFAULT_TODO_CNT * a.weight;
+    resultB = TodoManager.DEFAULT_TARGET_CNT * targetWeightB + TodoManager.DEFAULT_PLAN_CNT * planWeightB +
+      TodoManager.DEFAULT_TODO_CNT * b.weight;
+    console.log("a:", resultA, "targetA:", targetWeightA, "planA:", planWeightA, "todoA:",a.weight,
+      "b:", resultB, "targetB:", targetWeightB, "planB:", planWeightB,"todoB:",b.weight);
+    return resultA - resultB;
+  }
+
   filterByTargetId(uuid) {
     return this.todos.filter(todo => todo.targetId == uuid)
   }
 
-  filterByTargetId(uuid) {
+  filterByPlanId(uuid) {
     return this.todos.filter(todo => todo.planId == uuid)
+  }
+
+  getStatisticsByDate() {
+    let result = []
+    let todos = this.todos
+    let temp = {}
+    todos.forEach((item) => {
+      temp[item.completedAt] = temp[item.completedAt] ? temp[item.completedAt] + 1 : 1
+    })
+    for (let key in temp) {
+      result.push({
+        completedAt: key,
+        count: temp[key]
+      })
+    }
+    result = result.sort((a, b) => (a.completedAt > b.completedAt))
+    return result
   }
   
 }

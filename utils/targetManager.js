@@ -10,7 +10,13 @@ class TargetManager {
       this.targets = targetStore.getTargets()
     }
   }
-  
+  getUncompleteds(){
+    return this.targets.filter(target => target.completed == false)
+  }
+
+  getCompleteds() {
+    return this.targets.filter(target => target.completed == true)
+  }
 }
 
 export default TargetManager

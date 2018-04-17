@@ -86,6 +86,23 @@ button::after {
   color: #fff;
 }
 
+.button-completed {
+  background-color: #888888;
+  border: 1px solid #888888;
+  color: #fff;
+}
+
+.button-delete {
+  background-color: #E64340;
+  border: 1px solid #E64340;
+  color: #fff;
+}
+
 .button-round {
   border-radius: 300rpx;
+}
+
+.bottom-button {
+  width:auto !important;
+  padding: 0 !important;
 }

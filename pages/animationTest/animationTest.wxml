@@ -1,5 +1,5 @@
 <!--pages/animationTest/animationTest.wxml-->
-<view wx:for="{{items}}" class='page'>
+<view wx:for="{{items}}" wx:key ="{{index}}" class='page'>
   <view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa' animation="{{animation}}" style='left:{{50 + index * 750}}rpx'>
     {{item}}
     <image src='../../assets/images/study.png'></image>

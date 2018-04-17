@@ -1,0 +1,18 @@
+/* pages/test/test.wxss */
+@import "../../assets/wxss/todo.wxss";
+@import "../../assets/wxss/mytodotest.wxss";
+
+.button {
+  display: inline-block;
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  border-image: none;
+  box-shadow: none;
+  background-color: #fff;
+  font-size: 32rpx;
+  margin: 10rpx;
+}
+.button-container {
+  display: flex;
+}

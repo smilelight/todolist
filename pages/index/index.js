@@ -24,7 +24,7 @@ Page({
    * 导航到主页面
    */
   openPage (replace) {
-    let options = { url: '../home/home' }
+    let options = { url: '../calendar/calendar' }
     // 导航
     wx.switchTab(options)
   }

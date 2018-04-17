@@ -31,6 +31,9 @@ Page({
       },{
         zh:"关于",
         url: "about/about"
+      },{
+        zh:"测试",
+        url:"test/test"
       }
     ]
   },
@@ -114,5 +117,13 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  navigateToPage: function (e) {
+    var page = e.currentTarget.dataset.page;
+    console.log(page)
+    wx.navigateTo({
+      url: '../' + page + '/' + page,
+    })
+  },
 })

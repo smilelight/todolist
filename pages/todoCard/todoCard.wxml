@@ -4,6 +4,7 @@
     <!-- {{item}}
     <image src='../../assets/images/study.png'></image> -->
 <view>{{todo.title}}</view>
+<view>{{todo.desc}}</view>
 <view>{{todoTargetTitles[index]}}</view>
 <view>{{todoPlanTitles[index]}}</view>
 <view>{{todoBeginTimes[index]}}</view>

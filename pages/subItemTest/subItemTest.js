@@ -1,30 +1,18 @@
-// pages/home/home.js
-import Todo from '../../models/Todo'
-import todoStore from '../../store/todoStore'
-import TodoManager from '../../utils/todoManager'
-
-//获取应用实例
-const app = getApp()
-
-
+// pages/subItemTest/subItemTest.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    customData:Array.from({length:20}).map((value,index)=>"haha"+index)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.redirectTo({
-    //   url: '../calendar/calendar',
-    //   success: function(res) {},
-    //   fail: function(res) {},
-    //   complete: function(res) {},
-    // })
+  
   },
 
   /**
@@ -38,13 +26,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // 为了新建后列表能更新，此逻辑必须写在 onShow 事件
+  
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+  
   },
 
   /**
@@ -73,5 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
+  }
 })

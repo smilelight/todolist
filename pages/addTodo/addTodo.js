@@ -5,6 +5,7 @@ import util from '../../utils/util.js'
 import targetStore from '../../store/targetStore.js'
 import planStore from '../../store/planStore.js'
 import PlanManager from '../../utils/planManager.js'
+import TargetManager from '../../utils/targetManager.js'
 
 /**
  * 该页面添加或者修改任务，具体视是否传入页面参数而定
@@ -42,8 +43,8 @@ Page({
   onLoad: function (options) {
     todoStore.read()
 
-    this.data.targets = targetStore.getTargets()
-    this.data.plans = planStore.getPlans()
+    this.data.targets = (new TargetManager(targetStore.getTargets())).getUncompleteds()
+    this.data.plans = (new PlanManager(planStore.getPlans())).getUncompleteds()
     this.data.targetsTitles = this.data.targets.map(value => value.title)
     this.data.plansTitles = this.data.plans.map(value => value.title)
 
@@ -75,6 +76,7 @@ Page({
     }
 
     this.data.plans = (new PlanManager()).filterByTargetId(this.data.todo.targetId)
+    this.data.plans = (new PlanManager(this.data.plans)).getUncompleteds()
     this.data.plansTitles = this.data.plans.map(value => value.title)
     if (this.data.todo.planId == null) {
       if (this.data.plans.length == 0) {
@@ -255,5 +257,53 @@ Page({
     this.data.todo.planId = this.data.plans[parseInt(e.detail.value)].uuid
     this.data.planIndex = parseInt(e.detail.value)
     this.update()
+  },
+  handleDeleteTap(e) {
+    if(this.data.edit){
+      let that = this;
+      wx.showModal({
+        title: '确认删除',
+        content: '坚持就是胜利，确定要放弃吗？\n不妨再试试，为了理想！',
+        showCancel: true,
+        cancelText: '再试试！',
+        cancelColor: '',
+        confirmText: '不死不休',
+        confirmColor: '',
+        success: function (res) {
+          if (res.confirm) {
+            todoStore.removeTodo(that.data.todo.uuid)
+            todoStore.save()
+            wx.navigateBack({
+              delta: 1,
+            })
+            wx.showToast({
+              title: '同样祝君好运！',
+              icon: '',
+              image: '',
+              duration: 1000,
+              mask: true,
+              success: function(res) {},
+              fail: function(res) {},
+              complete: function(res) {},
+            })
+          } else if (res.cancel) {
+            wx.showToast({
+              title: '好样的老铁！',
+              icon: '',
+              image: '',
+              duration: 1000,
+              mask: true,
+              success: function (res) { },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+          }
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    } else {
+      wx.navigateBack()
+    }
   },
 })

@@ -59,3 +59,7 @@
 .calendar_box:nth-child(2) .weekday_label{
   float: right;
 }
+
+.text_center {
+  text-align: center;
+}

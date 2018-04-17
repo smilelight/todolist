@@ -1,0 +1,26 @@
+/* components/sub-items/sub-items.wxss */
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.sub-item {
+  flex: 0 1 auto;
+  /* width: 25%; */
+  text-align: center;
+  background-color: #09BB07;
+  color: #fff;
+  margin: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  padding: 10rpx;
+}
+.sub-completed-item {
+  background-color: #99d1fc;
+}

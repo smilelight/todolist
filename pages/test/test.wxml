@@ -1,0 +1,77 @@
+<!--pages/test/test.wxml-->
+<view wx:if="{{true}}">
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='testChart' class='button'>图表测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='monthList' class='button'>月视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='dayList' class='button'>日视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='weekList' class='button'>周视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='yearList' class='button'>年视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='lifeList' class='button'>一生视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='planList' class='button'>计划视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='fourQuadrant' class='button'>四象限视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='timerShaft' class='button'>时间轴视图测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='fqTodoItemTest' class='button'>四象限Todo测试</button>
+  </view>
+</view>
+
+  <view wx:if="{{true}}">
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='planList' class='button'>计划列表测试</button>
+  </view>
+
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='addTarget' class='button'>增加目标测试</button>
+  </view>
+
+   <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='addPlan' class='button'>增加计划测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='targetList' class='button'>目标列表测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='touchTest' class='button'>touch测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='animationTest' class='button'>animation测试</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='testAnimation' class='button'>animation测试+</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='todoCard' class='button'>todo卡片</button>
+  </view>
+
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='timerShaft' class='button'>时间轴测试</button>
+  </view>
+  <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='subItemTest' class='button'>subItem测试</button>
+  </view>
+  </view>

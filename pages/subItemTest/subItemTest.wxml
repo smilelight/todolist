@@ -1,0 +1,2 @@
+<!--pages/subItemTest/subItemTest.wxml-->
+<sub-items customData="{{customData}}"></sub-items>

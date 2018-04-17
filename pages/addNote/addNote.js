@@ -158,4 +158,52 @@ Page({
     this.data.planIndex = parseInt(e.detail.value)
     this.update()
   },
+  handleDeleteTap(e) {
+    if (this.data.edit) {
+      let that = this;
+      wx.showModal({
+        title: '确认删除',
+        content: '坚持就是胜利，确定要放弃吗？\n不妨再试试，为了理想！',
+        showCancel: true,
+        cancelText: '再试试！',
+        cancelColor: '',
+        confirmText: '不死不休',
+        confirmColor: '',
+        success: function (res) {
+          if (res.confirm) {
+            noteStore.removeNote(that.data.note.uuid)
+            noteStore.save()
+            wx.navigateBack({
+              delta: 1,
+            })
+            wx.showToast({
+              title: '同样祝君好运！',
+              icon: '',
+              image: '',
+              duration: 1000,
+              mask: true,
+              success: function (res) { },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+          } else if (res.cancel) {
+            wx.showToast({
+              title: '好样的老铁！',
+              icon: '',
+              image: '',
+              duration: 1000,
+              mask: true,
+              success: function (res) { },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+          }
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    } else {
+      wx.navigateBack()
+    }
+  },
 })

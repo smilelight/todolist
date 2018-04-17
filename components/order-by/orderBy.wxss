@@ -9,7 +9,7 @@
 
 .order-item {
   flex: 1;
-  width: 30%;
+  width: 25%;
   text-align: center;
   background-color: #09BB07;
   color: #fff;

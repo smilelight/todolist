@@ -81,19 +81,19 @@
 * [x] 增加todo时可以选择plan和target（V）
 * [x] 增加note的展示工作（V）
 * [x] 增加note时可以选择plan和target（V）
-* [ ] 增加管理plan和target的界面（V）
+* [ ] 增加管理plan和target的界面（V）(暂弃)
 * [x] 增加一句targetId筛选plan、note、todo的功能（C）
 * [x] 增加一句planId筛选note、todo的功能（C）
 * [x] 增加target列表南片面（V）
-* [ ] 增加target下的plan的显示界面（V）
-* [ ] 增加plan下的下属todo界面（V）
+* [x] 增加target下的plan的显示界面（V）
+* [x] 增加plan下的下属todo界面（V）
 * [x] 增加plan列表界面（V）
 * [x] 历史（时间轴、功能暂弃）（V）
 * [x] 增加按日期/目标统计图表功能（V）（按目标暂弃）
 * [x] 小卡片功能（V）
-* [ ] 增加todo、note、plan、target的删除功能（V）（C）
-* [ ] 增加todo的智能排序算法（C）
+* [x] 增加todo、note、plan、target的删除功能（V）（C）(目前已实现界面，逻辑实现暂弃，算了还是实现了，不过如果要删除target得先把关联的plan全删了，如果要删除plan得先把下属的todo全删了)
+* [x] 增加todo的智能排序算法（C）
 * [ ] 采用进度条，增加计划完成度、目标完成度（V）（M）（也可以采用图表）
-* [ ] 增加todo-item的滑动删除功能（V）
+* [ ] 增加todo-item的滑动删除功能（V）(不打算实现了，因为每项todo的制定都应经过考虑，不能轻易说删就删，如果删除请进入详情页再删！)
 * [ ] 增加排序中按类别、按优先级的下拉菜单（V）（暂弃）
 * [ ] 完善小卡片界面，如名人名言、任务总结、是否已完成等

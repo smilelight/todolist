@@ -51,3 +51,18 @@ button {
  */
  width: 90% !important;
 }
+
+.bottom-button {
+  width:auto !important;
+  padding: 0 !important;
+}
+
+.page {
+  padding-bottom: 0;
+}
+
+.chart {
+  margin: 30rpx;
+  padding: 60rpx;
+
+}

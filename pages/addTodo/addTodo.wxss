@@ -36,3 +36,7 @@ button {
  */
  width: 90% !important;
 }
+
+.page {
+  padding-bottom: 0;
+}

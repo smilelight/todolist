@@ -1,1 +1,90 @@
 /* pages/statistics/statistics.wxss */
+.page {
+  background-color: #fff;
+}
+
+.user-card {
+  background-color: #fff;
+  box-shadow: 0 0 15rpx 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-top: 200rpx;
+  background-size: contain;
+  z-index: 0;
+  margin-bottom: 30rpx;
+}
+
+.user-card__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 268rpx;
+  z-index: -1;
+}
+
+.user-card__head {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #6482DD;
+  border-radius: 50%;
+  margin-left: 7%;
+  margin-right: 30rpx;
+  background-color: #fff;
+}
+
+.user-card__name {
+  color: #6482DD;
+  font-size: 38rpx;
+}
+
+.user-card__links {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-card__linkItem {
+  flex: 1;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  border-right: 1px dotted #ccc;
+  padding: 5rpx 0;
+}
+
+.user-card__linkItem:last-child {
+  border-right: none;
+}
+
+.user-card__linkLabel {
+  color: #999;
+}
+
+.user-card__linkValue {
+  padding-left: 15rpx;
+}
+
+.charts-card {
+  margin-bottom: 50rpx;
+}
+
+.charts-card__header {
+  display: block;
+  border-left: 8rpx solid #6482DD;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.charts-card__body {
+  display: block;
+  width: 100%;
+  height: 370rpx;
+  padding: 20rpx;
+}
+
+.tips {
+  padding: 30rpx;
+}

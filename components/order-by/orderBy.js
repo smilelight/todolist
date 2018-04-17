@@ -6,7 +6,7 @@ Component({
   properties: {
     orders: {
       type: Array,
-      default: ["时间", "类别", "优先级"]
+      default: ["时间", "类别", "优先级","默认"]
     }
   },
 

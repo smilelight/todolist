@@ -31,7 +31,9 @@
     "pages/touchTest/touchTest",
     "pages/animationTest/animationTest",
     "pages/testAnimation/testAnimation",
-    "pages/todoCard/todoCard"
+    "pages/todoCard/todoCard",
+    "pages/subItemTest/subItemTest",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -58,10 +60,10 @@
         "selectedIconPath": "assets/images/note_green.png"
       },
       {
-        "pagePath": "pages/home/home",
-        "text": "test",
-        "iconPath": "assets/images/test_black.png",
-        "selectedIconPath": "assets/images/test_green.png"
+        "pagePath": "pages/calendar/calendar",
+        "text": "home",
+        "iconPath": "assets/images/homepage_black.png",
+        "selectedIconPath": "assets/images/homepage_green.png"
       },
       {
         "pagePath": "pages/targetList/targetList",
