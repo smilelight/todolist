@@ -8,11 +8,11 @@
  .aaa {
   position: fixed;
   left: 50rpx;
-  top: 100rpx;
-  width: 610rpx;
-  height: 800rpx;
-  background-color: #c9fcf4;
-  border: 20rpx solid #7af9e6;
+  top: 10%;
+  width: 640rpx;
+  height: 80%;
+  background-color: #deeffc;
+  border: 5rpx solid #88ccfc;
   border-radius: 20rpx;
   text-align: center;
   justify-content: center;
