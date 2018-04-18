@@ -1,3 +1,11 @@
+const AV = require('./utils/av-live-query-weapp-min');
+
+AV.init({
+  appId: '5ySG2ladeBsE7leajrAHcwRC-gzGzoHsz',
+  appKey: 'T3U8iPCKN5vIXEf9ry8M8YgT',
+});
+
+
 import storeManager from './store/storeManager'
 import todoStore from './store/todoStore'
 
@@ -83,6 +91,7 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
+              // console.log(res)
               this.globalData.userInfo = res.userInfo
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -114,3 +123,7 @@ App({
     storeManager.save()
   }
 })
+
+//"32a100df88e6cff8cb956f98ca55c9f19703938e"
+//"594b0093b39240bdee2c160c61dc3d51b7222c13"
+//"https://wx.qlogo.cn/mmopen/vi_32/QI9Yemiaiaae7tBRhVrRsN9wnGp3voEg69kzWIW0deib7TB45ibKsdI1XjoQL4iaicv9aZ9SicByz5Xxq2uwyoibk0VlibQ/0"

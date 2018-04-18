@@ -90,6 +90,7 @@ class PlanStore extends Store {
    */
   setPlans(plans) {
     this.plans = plans
+    this.save()
   }
 
   /**

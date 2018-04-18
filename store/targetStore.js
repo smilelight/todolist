@@ -76,6 +76,7 @@ class TargetStore extends Store {
    */
   setTargets(targets) {
     this.targets = targets
+    this.save()
   }
 
   /**

@@ -1,4 +1,7 @@
 <!--pages/test/test.wxml-->
+ <view class='button-container'>
+    <button bindtap='navigateToPage' data-page='testLeanCloud' class='button'>后台测试</button>
+  </view>
 <view wx:if="{{true}}">
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='calendar' class='button'>日历测试</button>

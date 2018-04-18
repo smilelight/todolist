@@ -71,6 +71,7 @@ class NoteStore extends Store {
    */
   setNotes(notes) {
     this.notes = notes
+    this.save()
   }
 
   /**

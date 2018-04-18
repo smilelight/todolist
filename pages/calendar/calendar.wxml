@@ -17,8 +17,8 @@
     <view class="weekday_label">五</view>
     <view class="weekday_label">六</view>
   </view>
-  <view class="calendar_box" wx:for="{{dateList}}" wx:for-item="week">
-    <view class="weekday_label" wx:for="{{week}}">
+  <view class="calendar_box" wx:for="{{dateList}}" wx:for-item="week" wx:key="{{index}}">
+    <view class="weekday_label" wx:for="{{week}}" wx:key="{{index}}">
       <text class="{{item.value==selectedDate?'active_date':''}}" bindtap="selectDate" data-date="{{item}}">{{item.date}}</text>
     </view>
   </view>

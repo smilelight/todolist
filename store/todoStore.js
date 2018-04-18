@@ -155,6 +155,7 @@ class TodoStore extends Store {
    */
   setTodos(todos) {
     this.todos = todos
+    this.save()
   }
 
   /**

@@ -1,0 +1,6 @@
+<!--pages/testLeanCloud/testLeanCloud.wxml-->
+<view>
+<button bindtap='bindTap'>测试</button>
+<button bindtap='bindDataBackUp'>数据备份</button>
+<button bindtap='bindDataRestore'>数据还原</button>
+</view>

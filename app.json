@@ -33,7 +33,8 @@
     "pages/testAnimation/testAnimation",
     "pages/todoCard/todoCard",
     "pages/subItemTest/subItemTest",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/testLeanCloud/testLeanCloud"
   ],
   "window": {
     "backgroundTextStyle": "light",
