@@ -196,6 +196,7 @@ class TodoStore extends Store {
   getStatisticsByDate () {
     let result = []
     let todos = this.getCompletedTodos()
+    // console.log(todos)
     let temp = {}
     todos.forEach((item) => {
       temp[item.completedAt] = temp[item.completedAt] ? temp[item.completedAt] + 1 : 1

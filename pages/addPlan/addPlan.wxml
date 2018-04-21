@@ -63,7 +63,7 @@
     <view class="field-item">
       <label class="field-label">下属todo</label>
       <label class="field-control">
-        <sub-items customData="{{todoTitles}}"></sub-items>
+        <sub-items customData="{{todos}}"></sub-items>
       </label>
     </view>
     <view class="field-item">

@@ -1,6 +1,6 @@
 <!--components/sub-items/sub-items.wxml-->
 <view class='sub-container'>
-  <view class='sub-item {{index % 2 ? "sub-completed-item" : ""}}' wx:for="{{customData}}" wx:key="{{index}}">
-    {{item}}
+  <view class='sub-item {{item.completed ? "sub-completed-item" : ""}}' wx:for="{{customData}}" wx:key="{{index}}">
+    {{item.title}}
   </view>
 </view>

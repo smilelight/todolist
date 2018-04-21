@@ -73,6 +73,7 @@ Page({
     this.setData(data)
     this.updateChartsA()
     this.updateChartsB()
+    this.updateChartsC()
   },
 
   updateChartsA: function () {
@@ -168,6 +169,7 @@ Page({
     var data = [];
 
     let statistics = todoStore.getStatisticsByDate()
+    // console.log(statistics)
     statistics.forEach((item) => {
       categories.push(util.formatTime(new Date(item.completedAt))) 
       data.push(item.count)
@@ -178,18 +180,23 @@ Page({
     }
   },
   touchHandler: function (e) {
+    console.log(e)
     lineChart.scrollStart(e);
+    console.log('fuck')
   },
   moveHandler: function (e) {
+    // console.log(e)
     lineChart.scroll(e);
   },
   touchEndHandler: function (e) {
+    console.log(e)
     lineChart.scrollEnd(e);
     lineChart.showToolTip(e, {
       format: function (item, category) {
         return category + ' ' + item.name + ':' + item.data
       }
     });
+    console.log('shit')
   },
   renderChartsB() {
     var chartsData = this.getChartsBData()
@@ -197,7 +204,7 @@ Page({
       canvasId: 'chartsB',
       type: 'line',
       categories: chartsData.categories,
-      animation: true,
+      animation: false,
       series: [{
         name: '任务完成量',
         data: chartsData.data,

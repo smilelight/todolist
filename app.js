@@ -50,6 +50,8 @@ console.log(todomanager.todoFilter("timeblock",20))//根据时间段过滤
 console.log(todomanager.todoFilter("target",null))//根据目标过滤
 console.log(todomanager.todoFilter("plan",null))//根据计划过滤
 
+// import test from 'utils/testMyModule.js'
+
 
 
 
@@ -124,6 +126,3 @@ App({
   }
 })
 
-//"32a100df88e6cff8cb956f98ca55c9f19703938e"
-//"594b0093b39240bdee2c160c61dc3d51b7222c13"
-//"https://wx.qlogo.cn/mmopen/vi_32/QI9Yemiaiaae7tBRhVrRsN9wnGp3voEg69kzWIW0deib7TB45ibKsdI1XjoQL4iaicv9aZ9SicByz5Xxq2uwyoibk0VlibQ/0"

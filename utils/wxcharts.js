@@ -2036,6 +2036,7 @@ Charts.prototype.scroll = function (e) {
 
 Charts.prototype.scrollEnd = function (e) {
     if (this.opts.enableScroll === true) {
+      console.log('fuckfuck!')
         var _scrollOption = this.scrollOption,
             currentOffset = _scrollOption.currentOffset,
             distance = _scrollOption.distance;

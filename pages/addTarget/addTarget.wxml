@@ -45,7 +45,7 @@
     <view class="field-item">
       <label class="field-label">下属计划</label>
       <label class="field-control">
-        <sub-items customData="{{planTitles}}"></sub-items>
+        <sub-items customData="{{plans}}"></sub-items>
       </label>
     </view>
     <view class="field-item">
