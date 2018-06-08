@@ -34,7 +34,8 @@
     "pages/todoCard/todoCard",
     "pages/subItemTest/subItemTest",
     "pages/test/test",
-    "pages/testLeanCloud/testLeanCloud"
+    "pages/testLeanCloud/testLeanCloud",
+    "pages/textAnalysis/textAnalysis"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -49,32 +50,32 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
+        "pagePath": "pages/targetList/targetList",
+        "text": "目标",
+        "iconPath": "assets/images/target_black.png",
+        "selectedIconPath": "assets/images/target_green.png"
+      },
+      {
+        "pagePath": "pages/planList/planList",
+        "text": "计划",
+        "iconPath": "assets/images/plan_black.png",
+        "selectedIconPath": "assets/images/plan_green.png"
+      },
+      {
         "pagePath": "pages/todoList/todoList",
-        "text": "todo",
+        "text": "任务",
         "iconPath": "assets/images/todolist_black.png",
         "selectedIconPath": "assets/images/todolist_green.png"
       },
       {
         "pagePath": "pages/noteList/noteList",
-        "text": "note",
+        "text": "笔记",
         "iconPath": "assets/images/note_black.png",
         "selectedIconPath": "assets/images/note_green.png"
       },
       {
-        "pagePath": "pages/calendar/calendar",
-        "text": "home",
-        "iconPath": "assets/images/homepage_black.png",
-        "selectedIconPath": "assets/images/homepage_green.png"
-      },
-      {
-        "pagePath": "pages/targetList/targetList",
-        "text": "target",
-        "iconPath": "assets/images/target_black.png",
-        "selectedIconPath": "assets/images/target_green.png"
-      },
-      {
         "pagePath": "pages/me/me",
-        "text": "me",
+        "text": "我的",
         "iconPath": "assets/images/emoji_black.png",
         "selectedIconPath": "assets/images/emoji_green.png"
       }

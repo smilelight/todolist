@@ -87,7 +87,10 @@ class QCloud {
         }
     }
     request(fthen,fcatch){
-        this.fly.get(this.config.path,this.params).then(fthen).catch(fcatch)
+        this.fly.get(this.config.path,this.params).then(function(response){
+          // console.log(response)
+          fthen(response.data)
+        }).catch(fcatch)
     }
 
 }

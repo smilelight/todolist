@@ -23,7 +23,7 @@ Page({
       color:"#C0EFFA"
     }, 
     { 
-      "title": "不重要-很紧急",
+      "title": "不重要-不紧急",
       color:"#DCF9B0"
     }],
     // todos

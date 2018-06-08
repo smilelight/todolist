@@ -219,7 +219,7 @@ class TodoStore extends Store {
     this.todos = todos
     this.todos.forEach(todo => todo.beginTime = new Date(todo.beginTime))
     this.todos.forEach(todo => todo.endTime = new Date(todo.endTime))
-    this.todos.forEach(todo => console.log("type:",typeof(todo.beginTime)))
+    // this.todos.forEach(todo => console.log("type:",typeof(todo.beginTime)))
   }
 
   /**

@@ -1,7 +1,7 @@
 /* pages/targetList/targetList.wxss */
 .page {
 width: 100%;
-
+background: #FFF;
 }
 
 .target-item {
@@ -12,6 +12,8 @@ text-align: center;
 vertical-align: middle;
 /* background-color: #090; */
 margin: 20rpx;
-border: 5rpx solid #AAA;
-border-radius: 20rpx;
+border: 5rpx solid #EEE;
+border-radius: 10rpx;
 }
+
+@import "../../assets/wxss/todo.wxss";

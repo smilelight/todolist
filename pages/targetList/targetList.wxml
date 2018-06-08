@@ -3,4 +3,5 @@
 <view class='target-item' wx:for="{{targets}}" wx:key="{{index}}" wx:for-item="target" bindtap='handleItemTap' data-uuid="{{target.uuid}}">
 {{target.title}}
 </view>
+<view class="todo-add" bindtap="handleAddTarget">+</view>
 </view>

@@ -1,2 +1,15 @@
 <!--pages/settings/settings.wxml-->
-<text>设置功能暂未实现</text>
+<view class='page'>
+  <view class="field-set" style="background: white;">
+    <view class="field-item">
+      <label class="field-label">任务列表：</label>
+      <label class="field-control">
+        <radio-group class="radio-group" bindchange="handleStyleChange">
+          <label class="radio" wx:for="{{styleItems}}" wx:key="{{index}}">
+            <radio value="{{item.value}}" checked="item.value == styleNum" />{{item.title}}
+          </label>
+        </radio-group>
+      </label>
+    </view>
+  </view>
+</view>

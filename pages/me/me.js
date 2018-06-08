@@ -19,13 +19,32 @@ Page({
       },{
         zh: "统计",
         url: "statistics/statistics"
-      },{
-        zh: "分享",
-        url: "share/share"
-      },{
+      },
+      // {
+      //   zh: "分享",
+      //   url: "share/share"
+      // },
+      {
         zh: "同步",
         url: "synchronization/synchronization"
-      },{
+      },
+      {
+        zh:"小卡片",
+        url: "todoCard/todoCard"
+      },
+      {
+        zh:"日历",
+        url: "calendar/calendar"
+      },
+      {
+        zh:"四象限",
+        url: "fourQuadrant/fourQuadrant"
+      }, 
+      {
+        zh: "高级",
+        url: "textAnalysis/textAnalysis"
+      },
+      {
         zh: "设置",
         url: "settings/settings"
       },{

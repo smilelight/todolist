@@ -1,0 +1,44 @@
+<!--pages/textAnalysis/textAnalysis.wxml-->
+<view class='page'>
+  <view>
+    <view class="charts-card">
+      <view>
+        <text class="charts-card__header">文本分类</text>
+        <view class='radios'>
+        <radio-group bindchange="textclassify">
+        <label class="label" wx:for="{{items}}" wx:key="{{index}}">
+        <radio class='radio' value="{{item.name}}">{{item.value}}</radio>
+        </label>
+        </radio-group>
+        </view>
+        <canvas class="charts-card__body" canvas-id="textChart"></canvas>
+      </view>
+    </view>
+    <view class="charts-card">
+      <view>
+        <text class="charts-card__header">关键词抽取</text>
+        <view class='radios'>
+        <radio-group bindchange="keywordsextract">
+        <label class="label" wx:for="{{items}}" wx:key="{{index}}">
+        <radio class='radio' value="{{item.name}}">{{item.value}}</radio>
+        </label>
+        </radio-group>
+        </view>
+        <canvas class="charts-card__body" canvas-id="keyChart"></canvas>
+      </view>
+    </view>
+    <view class="charts-card">
+      <view>
+        <text class="charts-card__header">情感分析</text>
+        <view class='radios'>
+        <radio-group bindchange="sentenceanalyse">
+        <label class="label" wx:for="{{items}}" wx:key="{{index}}">
+        <radio class='radio' value="{{item.name}}">{{item.value}}</radio>
+        </label>
+        </radio-group>
+        </view>
+        <canvas class="charts-card__body" canvas-id="senChart"></canvas>
+      </view>
+    </view>
+  </view>
+</view>

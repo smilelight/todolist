@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    styleNum:1,//1:列表，2：日历，3：小卡片
+    styleItems:[
+      {
+      title:'列表',
+      value:1
+    },{
+      title:'日历',
+      value:2
+    },{
+      title:'小卡片',
+      value:3
+    }]
   },
 
   /**
@@ -62,5 +73,9 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  handleStyleChange:function(e){
+    console.log(e.detail.value);
   }
 })

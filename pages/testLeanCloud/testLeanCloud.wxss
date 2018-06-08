@@ -1,1 +1,13 @@
 /* pages/testLeanCloud/testLeanCloud.wxss */
+
+button {
+  width: calc(100% - 40rpx);
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  vertical-align: middle;
+  /* background-color: #090; */
+  margin: 20rpx;
+  border: 5rpx solid #EEE;
+  border-radius: 10rpx;
+}

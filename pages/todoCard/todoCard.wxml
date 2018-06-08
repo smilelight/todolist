@@ -1,13 +1,13 @@
 <!--pages/todoCard/todoCard.wxml-->
 <view wx:for="{{todos}}" class='page' wx:for-item="todo" wx:key="index">
-  <view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa' animation="{{animation}}" style='left:{{50 + index * 750}}rpx'>
+  <view bindtouchstart='handleTouchStart' bindtouchmove='handleTouchMove' bindtouchend='handleTouchEnd' class='aaa todo-card' animation="{{animation}}" style='left:{{50 + index * 750}}rpx'>
     <!-- {{item}}
     <image src='../../assets/images/study.png'></image> -->
-    <view>{{todo.title}}</view>
-    <view>{{todo.desc}}</view>
-    <view>{{todoTargetTitles[index]}}</view>
-    <view>{{todoPlanTitles[index]}}</view>
-    <view>{{todoBeginTimes[index]}}</view>
-    <view>{{todoEndTimes[index]}}</view>
+    <view class='todo-card__title'>{{todo.title}}</view>
+    <view class='todo-card__target'>目标：{{todoTargetTitles[index]}}</view>
+    <view class='todo-card__plan'>计划：{{todoPlanTitles[index]}}</view>
+    <view class='todo-card__desc'>描述：{{todo.desc}}</view>
+    <view>开始时间：{{todoBeginTimes[index]}}</view>
+    <view>结束时间：{{todoEndTimes[index]}}</view>
   </view>
 </view>

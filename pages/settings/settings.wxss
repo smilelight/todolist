@@ -1,1 +1,71 @@
 /* pages/settings/settings.wxss */
+@import "../../assets/wxss/todolist";
+
+.create-header {
+  padding: 0;
+  border-bottom: 0;
+}
+
+button {
+  padding: 10rpx;
+  margin: 20rpx;
+}
+
+.field-content {
+  border: 1px solid red;
+}
+
+.todo-item__date {
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.todo-item__time {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio {
+  flex: 1;
+}
+
+.time-picker {
+  padding: 0rpx;
+}
+
+.textarea {
+  /* width: 100rpx; */
+  /* right: 50rpx; */
+/* position: static; */
+/* margin-right: 30rpx;
+ */
+ width: 90% !important;
+}
+
+.bottom-button {
+  width:auto !important;
+  padding: 0 !important;
+}
+
+.page {
+  padding-bottom: 0;
+}
+
+.chart {
+  margin: 30rpx;
+  padding: 60rpx;
+
+}
+.radio-group {
+  padding-right: 30rpx;
+}

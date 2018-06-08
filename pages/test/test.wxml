@@ -1,5 +1,5 @@
 <!--pages/test/test.wxml-->
- <view class='button-container'>
+ <!-- <view class='button-container'>
     <button bindtap='navigateToPage' data-page='testLeanCloud' class='button'>后台测试</button>
   </view>
 <view wx:if="{{true}}">
@@ -8,7 +8,7 @@
   </view>
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='testChart' class='button'>图表测试</button>
-  </view>
+  </view> -->
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='monthList' class='button'>月视图测试</button>
   </view>
@@ -24,7 +24,7 @@
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='lifeList' class='button'>一生视图测试</button>
   </view>
-  <view class='button-container'>
+  <!-- <view class='button-container'>
     <button bindtap='navigateToPage' data-page='planList' class='button'>计划视图测试</button>
   </view>
   <view class='button-container'>
@@ -77,4 +77,4 @@
   <view class='button-container'>
     <button bindtap='navigateToPage' data-page='subItemTest' class='button'>subItem测试</button>
   </view>
-  </view>
+  </view> -->

@@ -20,6 +20,6 @@
 }
 
 .loading__name {
-  font-size: 42rpx;
+  font-size: 35rpx;
   font-weight: 200;
 }

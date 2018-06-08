@@ -50,7 +50,8 @@ console.log(todomanager.todoFilter("timeblock",20))//根据时间段过滤
 console.log(todomanager.todoFilter("target",null))//根据目标过滤
 console.log(todomanager.todoFilter("plan",null))//根据计划过滤
 
-// import test from 'utils/testMyModule.js'
+import test from 'utils/testMyModule.js'
+
 
 
 

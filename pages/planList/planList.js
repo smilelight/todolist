@@ -80,5 +80,14 @@ Page({
     wx.navigateTo({
       url: '../addPlan/addPlan?uuid=' + uuid
     })
-  }
+  },
+
+  /**
+ * 新建事件
+ */
+  handleAddPlan(e) {
+    wx.navigateTo({
+      url: '../addPlan/addPlan'
+    })
+  },
 })

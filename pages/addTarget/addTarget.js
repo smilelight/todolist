@@ -55,7 +55,7 @@ Page({
       this.data.plansCompletedCount = this.data.plans.filter(value => value.completed == true).length
 
       wx.setNavigationBarTitle({
-        title: '修改任务',
+        title: '修改目标',
       })
 
     } else {

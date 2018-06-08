@@ -1,6 +1,10 @@
 /* pages/todoCard/todoCard.wxss */
+page {
+  background-color: #F8F8F8;
+}
 .page {
    width: 100vw; 
+   background-color: #F8F8F8;
   /* overflow: hidden; */
   /* overflow: visible; */
 }
@@ -12,7 +16,7 @@
   width: 640rpx;
   height: 80%;
   background-color: #deeffc;
-  border: 5rpx solid #88ccfc;
+  /* border: 5rpx solid #88ccfc; */
   border-radius: 20rpx;
   text-align: center;
   justify-content: center;
@@ -37,4 +41,42 @@
 image {
   width: 300rpx;
   height: 300rpx;
+}
+
+.todo-card {
+   background-color: #fff; 
+  /* border-radius: 8rpx; */
+  /* margin: 30rpx; */
+  /* padding: 30rpx; */
+  box-shadow: 3rpx 3rpx 15rpx 0 rgba(0, 0, 0, 0.1);
+  color: #9198AB;
+  font-size: 32rpx;
+}
+
+.todo-card__title {
+  display: block;
+  border-bottom: 1rpx dashed #ccc;
+  padding: 20rpx;
+  font-size: 40rpx;
+  margin: 20rpx;
+}
+
+.todo-card__desc {
+  display: block;
+  padding: 20rpx;
+  font-size: 28rpx;
+  margin: 20rpx;
+}
+.todo-card__target {
+  display: block;
+  border-bottom: 1rpx dashed #ccc;
+  padding: 20rpx;
+  margin: 20rpx;
+}
+
+.todo-card__plan {
+  display: block;
+  border-bottom: 1rpx dashed #ccc;
+  padding: 20rpx;
+  margin: 20rpx;
 }
